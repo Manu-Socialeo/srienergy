@@ -585,29 +585,7 @@
     </div>
   </section>
 
-  <!-- ================= IMPACT HIGHLIGHTS & STATS BAR ================= -->
-  <section class="relative bg-slate-900 text-white border-y border-slate-800/80 py-8 px-4 sm:px-6 lg:px-8 z-20">
-    <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-      <div class="p-4 rounded-2xl bg-slate-800/40 border border-slate-700/50 reveal">
-        <p class="font-display font-black text-3xl sm:text-4xl text-emerald-400">500+</p>
-        <p class="text-xs sm:text-sm font-medium text-slate-300 mt-1">Roofs Solarized in Mysore</p>
-      </div>
-      <div class="p-4 rounded-2xl bg-slate-800/40 border border-slate-700/50 reveal reveal-delay-1">
-        <p class="font-display font-black text-3xl sm:text-4xl text-white">₹2.4 Cr+</p>
-        <p class="text-xs sm:text-sm font-medium text-slate-300 mt-1">PM Surya Ghar Subsidies</p>
-      </div>
-      <div class="p-4 rounded-2xl bg-slate-800/40 border border-slate-700/50 reveal reveal-delay-2">
-        <p class="font-display font-black text-3xl sm:text-4xl text-amber-400">4.9 ★</p>
-        <p class="text-xs sm:text-sm font-medium text-slate-300 mt-1">Google Customer Rating</p>
-      </div>
-      <div class="p-4 rounded-2xl bg-slate-800/40 border border-slate-700/50 reveal reveal-delay-3">
-        <p class="font-display font-black text-3xl sm:text-4xl text-emerald-400"><span id="statPercent">0</span>%</p>
-        <p class="text-xs sm:text-sm font-medium text-slate-300 mt-1">Average Bill Reduction</p>
-      </div>
-    </div>
-  </section>
 
-  </section>
 
   <!-- ================= CONTINUOUS TRUST MARQUEE ================= -->
   <div class="bg-white border-y border-slate-200/80 py-3.5 overflow-hidden">
@@ -1659,25 +1637,7 @@
       reveals.forEach(el => el.classList.add('visible'));
     }
 
-    // 6. Stat Counter Animation on Scroll
-    let statAnimated = false;
-    const statCounter = document.getElementById('statPercent');
-    if (statCounter && 'IntersectionObserver' in window) {
-      const counterObs = new IntersectionObserver((entries, obs) => {
-        if (entries[0].isIntersecting && !statAnimated) {
-          statAnimated = true;
-          let current = 0;
-          const target = 90;
-          const timer = setInterval(() => {
-            current += 1;
-            statCounter.textContent = current + '%';
-            if (current >= target) clearInterval(timer);
-          }, 20);
-          obs.unobserve(statCounter);
-        }
-      }, { threshold: 0.5 });
-      counterObs.observe(statCounter);
-    }
+
   </script>
 </body>
 </html>
