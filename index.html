@@ -48,9 +48,29 @@
         "image": "https://srienergy.in/logo-full.png",
         "logo": "https://srienergy.in/logo-icon.png",
         "priceRange": "₹₹",
+        "founder": {
+          "@type": "Person",
+          "name": "Subaiah",
+          "jobTitle": "Managing Director"
+        },
+        "sameAs": [
+          "https://www.facebook.com/srienergy.in",
+          "https://x.com/srienergy_in",
+          "https://www.instagram.com/srienergy.in/",
+          "https://www.youtube.com/@SriEnergy-du5df",
+          "https://github.com/Manu-Socialeo/srienergy",
+          "https://srienergy.vercel.app/"
+        ],
+        "knowsAbout": [
+          "https://en.wikipedia.org/wiki/Rooftop_solar_power",
+          "https://en.wikipedia.org/wiki/PM_Surya_Ghar:_Muft_Bijli_Yojana",
+          "https://en.wikipedia.org/wiki/Lithium_iron_phosphate_battery",
+          "https://en.wikipedia.org/wiki/Solar_inverter",
+          "https://en.wikipedia.org/wiki/Net_metering"
+        ],
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "P.G Street, Sahithya Bhavan Rd, Vijaynagar",
+          "streetAddress": "#1,220/1, Behind VVCE, P.G Street, Sahithya Bhavan Rd, Vijaynagar",
           "addressLocality": "Mysuru",
           "addressRegion": "Karnataka",
           "postalCode": "570002",
@@ -238,121 +258,49 @@
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased selection:bg-brand-500 selection:text-white pb-safe-action">
 
-  <!-- ================= TOP NOTIFICATION / SUBSIDY BAR ================= -->
-  <div class="bg-slate-900 text-white text-xs py-2 px-4 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
-      <div class="flex items-center gap-2 justify-center">
-        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-          Govt Scheme
-        </span>
-        <span class="text-slate-300">
-          PM Surya Ghar Muft Bijli Yojana: Get up to <strong class="text-white">₹78,000 Subsidy</strong> on rooftop solar in Karnataka
-        </span>
-      </div>
-      <div class="flex items-center gap-4 text-slate-400 text-xs">
-        <a href="tel:+919019914411" class="hover:text-emerald-400 flex items-center gap-1 font-medium transition">
-          <svg class="w-3.5 h-3.5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/></svg>
-          +91 9019914411
-        </a>
-        <span class="hidden sm:inline text-slate-700">|</span>
-        <span class="hidden sm:inline text-slate-400">Mysuru &amp; Coorg</span>
-      </div>
-    </div>
-  </div>
+  <!-- ========== NAV ========== -->
+  <header id="navbar" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-5 md:px-8 py-3.5 md:py-4">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center py-1 group" title="Sri Energy">
+        <img src="logo-full.png" alt="Sri Energy" class="h-9 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105" />
+      </a>
 
-  <!-- ================= MAIN HEADER / NAVBAR ================= -->
-  <header id="navbar" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 md:h-20">
-        
-        <!-- Logo -->
-        <a href="index.html" class="flex items-center gap-2.5 group">
-          <div class="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200/60 flex items-center justify-center p-1.5 shadow-sm group-hover:scale-105 transition-transform">
-            <img src="logo-sun.png" alt="Sri Energy Logo" class="h-full w-full object-contain" />
-          </div>
-          <div class="flex flex-col">
-            <span class="font-display font-extrabold text-xl tracking-tight text-slate-900 group-hover:text-emerald-600 transition-colors">
-              Sri Energy
-            </span>
-            <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400 -mt-1">
-              Mysuru &amp; Coorg
-            </span>
-          </div>
-        </a>
+      <!-- Desktop Pill Navigation -->
+      <nav class="hidden md:flex items-center gap-0.5 bg-slate-100/90 rounded-full px-1.5 py-1 text-[13px] font-medium text-slate-700">
+        <a href="index.html" class="px-4 py-1.5 rounded-full bg-white text-slate-900 shadow-sm transition">Home</a>
+        <a href="solar-panels.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 hover:shadow-sm transition">Solar Panels</a>
+        <a href="solar-inverters.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 hover:shadow-sm transition">Inverters</a>
+        <a href="lithium-battery.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 hover:shadow-sm transition">Batteries</a>
+        <a href="#calculator" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 hover:shadow-sm transition text-emerald-700 font-semibold">Calculator</a>
+        <a href="blog/index.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 hover:shadow-sm transition">Blog</a>
+        <a href="#contact" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 hover:shadow-sm transition">Contact</a>
+      </nav>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-1 bg-slate-100/80 p-1.5 rounded-full border border-slate-200/70 text-[13px] font-semibold text-slate-700">
-          <a href="index.html" class="px-4 py-1.5 rounded-full bg-white text-slate-900 shadow-sm transition">Home</a>
-          <a href="solar-panels.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 hover:shadow-sm transition">Solar Panels</a>
-          <a href="solar-inverters.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 hover:shadow-sm transition">Inverters</a>
-          <a href="lithium-battery.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 hover:shadow-sm transition">Batteries</a>
-          <a href="#calculator" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 hover:shadow-sm transition text-emerald-700 flex items-center gap-1">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            Savings Calculator
-          </a>
-          <a href="blog/index.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 hover:shadow-sm transition">Blog</a>
-          <a href="#contact" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 hover:shadow-sm transition">Contact</a>
-        </nav>
+      <!-- Right CTA Button -->
+      <a href="#estimate" class="hidden sm:inline-flex items-center gap-2 text-[13px] font-medium bg-slate-900 text-white px-4 py-2 rounded-full hover:bg-slate-800 transition shadow-sm">
+        <span>Get A Quote</span>
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
 
-        <!-- Right Action Button -->
-        <div class="hidden sm:flex items-center gap-3">
-          <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20am%20interested%20in%20rooftop%20solar%20under%20PM%20Surya%20Ghar." target="_blank" rel="noopener" class="p-2.5 rounded-full text-emerald-600 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 transition" title="Chat on WhatsApp">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.179.182-.077.357.101.173.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
-          </a>
-          <a href="#estimate" class="inline-flex items-center gap-2 text-sm font-semibold bg-slate-900 text-white px-5 py-2.5 rounded-full hover:bg-emerald-600 hover:shadow-lg transition-all">
-            <span>Free Site Survey</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </a>
-        </div>
+      <!-- Mobile menu button -->
+      <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100" aria-label="Toggle navigation menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
 
-        <!-- Mobile Menu Hamburger Button -->
-        <div class="flex items-center gap-2 lg:hidden">
-          <a href="tel:+919019914411" class="p-2 rounded-lg bg-emerald-50 text-emerald-700 hover:bg-emerald-100 transition" aria-label="Call Sri Energy">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/></svg>
-          </a>
-          <button id="menuBtn" type="button" class="p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500" aria-label="Toggle navigation menu">
-            <svg id="menuIconClosed" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-            <svg id="menuIconOpen" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-          </button>
-        </div>
-
-      </div>
     </div>
 
-    <!-- Mobile Navigation Drawer -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 shadow-xl transition-all">
-      <div class="px-5 pt-3 pb-6 space-y-2">
-        <a href="index.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl font-semibold text-slate-900 bg-slate-50">
-          <span>Home</span>
-          <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-bold">Current</span>
-        </a>
-        <a href="solar-panels.html" class="block px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Solar Panels (Mono Perc &amp; TopCon)</a>
-        <a href="solar-inverters.html" class="block px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Solar Inverters (On-Grid &amp; Hybrid)</a>
-        <a href="lithium-battery.html" class="block px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Lithium Batteries (LiFePO4 Storage)</a>
-        <a href="#calculator" class="flex items-center gap-2 px-3 py-2.5 rounded-xl font-medium text-emerald-700 bg-emerald-50/70 hover:bg-emerald-50">
-          <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-          <span>Solar Savings Calculator</span>
-        </a>
-        <a href="blog/index.html" class="block px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Solar Blog &amp; Guides</a>
-        <a href="#contact" class="block px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Contact &amp; Location</a>
-        
-        <div class="pt-4 border-t border-slate-100 flex flex-col gap-2.5">
-          <a href="#estimate" class="w-full flex items-center justify-center gap-2 text-center font-semibold bg-emerald-600 text-white py-3 rounded-xl shadow-md hover:bg-emerald-700 transition">
-            <span>Get Free Quote &amp; Site Assessment</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </a>
-          <div class="grid grid-cols-2 gap-2 text-xs font-semibold">
-            <a href="tel:+919019914411" class="flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-50">
-              <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/></svg>
-              <span>Call Us</span>
-            </a>
-            <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20would%20like%20a%20free%20solar%20quote" target="_blank" rel="noopener" class="flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-emerald-200 bg-emerald-50 text-emerald-800">
-              <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.179.182-.077.357.101.173.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
-              <span>WhatsApp</span>
-            </a>
-          </div>
-        </div>
-      </div>
+    <!-- Mobile Nav -->
+    <div id="mobileMenu" class="hidden md:hidden px-5 pb-4 space-y-1 border-t border-slate-100 bg-white">
+      <a href="index.html" class="block py-2 text-sm font-medium text-emerald-700">Home</a>
+      <a href="solar-panels.html" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900">Solar Panels</a>
+      <a href="solar-inverters.html" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900">Inverters</a>
+      <a href="lithium-battery.html" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900">Batteries</a>
+      <a href="#calculator" class="block py-2 text-sm font-semibold text-emerald-700">Savings Calculator</a>
+      <a href="blog/index.html" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900">Blog</a>
+      <a href="#contact" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900">Contact</a>
+      <a href="#estimate" class="inline-flex mt-2 items-center gap-2 text-sm font-medium bg-slate-900 text-white px-4 py-2 rounded-full">Get A Quote</a>
     </div>
   </header>
 
@@ -898,8 +846,7 @@
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 relative">
-          <span class="font-display font-extrabold text-4xl text-slate-200 absolute top-4 right-4">01</span>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80">
           <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold mb-4">
             1
           </div>
@@ -909,8 +856,7 @@
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 relative">
-          <span class="font-display font-extrabold text-4xl text-slate-200 absolute top-4 right-4">02</span>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80">
           <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold mb-4">
             2
           </div>
@@ -920,8 +866,7 @@
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 relative">
-          <span class="font-display font-extrabold text-4xl text-slate-200 absolute top-4 right-4">03</span>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80">
           <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold mb-4">
             3
           </div>
@@ -931,14 +876,13 @@
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 relative">
-          <span class="font-display font-extrabold text-4xl text-slate-200 absolute top-4 right-4">04</span>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80">
           <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold mb-4">
             4
           </div>
           <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Inspection &amp; Subsidy Credit</h3>
           <p class="text-xs text-slate-500 leading-relaxed">
-            DISCOM inspects and installs the bidirectional bi-directional net meter. Your government subsidy is released directly to your bank account.
+            DISCOM inspects and installs the bi-directional net meter. Your government subsidy is released directly to your bank account.
           </p>
         </div>
 
@@ -1277,18 +1221,34 @@
         
         <!-- Brand Info -->
         <div class="col-span-2">
-          <a href="index.html" class="flex items-center gap-2.5 mb-4">
-            <div class="w-9 h-9 rounded-xl bg-amber-500/20 flex items-center justify-center p-1">
-              <img src="logo-sun.png" alt="Sri Energy Logo" class="h-full w-full object-contain" />
-            </div>
-            <span class="font-display font-extrabold text-xl text-white">Sri Energy</span>
+          <a href="index.html" class="inline-block mb-4" title="Sri Energy">
+            <img src="logo-white.png" alt="Sri Energy Logo" class="h-10 w-auto object-contain" />
           </a>
           <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
             Empowering Mysuru and Coorg with high-efficiency rooftop solar installations, PM Surya Ghar subsidy processing, and lithium battery energy storage.
           </p>
+          <p class="text-xs text-slate-400 mt-2">
+            <strong>Office:</strong> #1,220/1, Behind VVCE, P.G Street, Sahithya Bhavan Rd, Vijaynagar, Mysuru 570002
+          </p>
           <div class="mt-4 flex items-center gap-2 text-xs text-emerald-400 font-semibold">
             <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
             <span>ISO 9001:2015 Certified Installation Quality</span>
+          </div>
+
+          <!-- Social Links -->
+          <div class="flex items-center gap-3 mt-4 text-slate-400">
+            <a href="https://www.facebook.com/srienergy.in" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-900 hover:text-white hover:bg-slate-800 transition" aria-label="Facebook">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://x.com/srienergy_in" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-900 hover:text-white hover:bg-slate-800 transition" aria-label="X / Twitter">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/srienergy.in/" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-900 hover:text-white hover:bg-slate-800 transition" aria-label="Instagram">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@SriEnergy-du5df" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-slate-900 hover:text-white hover:bg-slate-800 transition" aria-label="YouTube">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
           </div>
         </div>
 
@@ -1304,15 +1264,15 @@
           </ul>
         </div>
 
-        <!-- Guides & Blog -->
+        <!-- Guides & Legal -->
         <div>
-          <p class="font-display font-bold text-sm text-white mb-3">Solar Guides</p>
+          <p class="font-display font-bold text-sm text-white mb-3">Policy &amp; Legal</p>
           <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="terms.html" class="hover:text-emerald-400 transition">Terms &amp; Conditions</a></li>
+            <li><a href="privacy.html" class="hover:text-emerald-400 transition">Privacy Policy</a></li>
             <li><a href="blog/pm-surya-ghar-subsidy-guide.html" class="hover:text-emerald-400 transition">PM Surya Ghar Guide</a></li>
             <li><a href="blog/rooftop-solar-cost-mysore.html" class="hover:text-emerald-400 transition">Solar Cost Mysore</a></li>
-            <li><a href="blog/on-grid-vs-off-grid-vs-hybrid.html" class="hover:text-emerald-400 transition">System Comparison</a></li>
-            <li><a href="blog/solar-pumpset-farmers-coorg.html" class="hover:text-emerald-400 transition">Coorg Farming Solar</a></li>
-            <li><a href="blog/index.html" class="hover:text-emerald-400 transition">All Blog Articles</a></li>
+            <li><a href="blog/index.html" class="hover:text-emerald-400 transition">Solar Knowledge Hub</a></li>
           </ul>
         </div>
 
@@ -1333,7 +1293,8 @@
       <div class="border-t border-slate-800/80 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
         <p>© 2026 Sri Energy. All rights reserved.</p>
         <div class="flex items-center gap-6">
-          <a href="https://srienergy.vercel.app/" class="hover:text-slate-400 transition">Live Deployment</a>
+          <a href="terms.html" class="hover:text-slate-400 transition">Terms</a>
+          <a href="privacy.html" class="hover:text-slate-400 transition">Privacy</a>
           <a href="sitemap.xml" class="hover:text-slate-400 transition">Sitemap</a>
           <a href="robots.txt" class="hover:text-slate-400 transition">Robots.txt</a>
           <a href="tel:+919019914411" class="text-emerald-400 font-semibold hover:underline">+91 9019914411</a>
@@ -1342,6 +1303,16 @@
 
     </div>
   </footer>
+
+  <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+  <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20would%20like%20to%20inquire%20about%20rooftop%20solar%20and%20PM%20Surya%20Ghar%20subsidies." target="_blank" rel="noopener noreferrer" class="fixed bottom-20 right-4 sm:bottom-7 sm:right-7 z-40 flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white pl-3.5 pr-4 py-3 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 group hover:scale-105 active:scale-95" aria-label="Chat with Sri Energy on WhatsApp">
+    <span class="relative flex h-2.5 w-2.5">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+    </span>
+    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.179.182-.077.357.101.173.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
+    <span class="text-xs font-bold tracking-wide">WhatsApp</span>
+  </a>
 
   <!-- ================= STICKY MOBILE BOTTOM BAR ================= -->
   <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2 shadow-2xl">
