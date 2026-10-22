@@ -242,6 +242,31 @@
     header#navbar #navLogoWhite {
       display: block;
     }
+    header#navbar #navCapsule {
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 4px 15px -2px rgba(0, 0, 0, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      color: #334155;
+    }
+    header#navbar #navCapsule a {
+      color: #334155;
+    }
+    header#navbar #navCapsule a:hover {
+      color: #047857;
+    }
+    header#navbar #navHomeLink {
+      background-color: #0f172a !important;
+      color: #ffffff !important;
+    }
+    header#navbar.nav-scrolled {
+      background-color: rgba(255, 255, 255, 0.96) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border-bottom-color: rgba(226, 232, 240, 0.8) !important;
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06) !important;
+    }
     header#navbar.nav-scrolled #navLogoWhite {
       display: none !important;
     }
@@ -251,6 +276,7 @@
     header#navbar.nav-scrolled #navCapsule {
       background-color: rgba(241, 245, 249, 0.95) !important;
       border-color: transparent !important;
+      box-shadow: none !important;
       color: #334155 !important;
     }
     header#navbar.nav-scrolled #navHomeLink {
@@ -276,6 +302,7 @@
     }
     header#navbar.nav-scrolled #navCtaBtn {
       background: #0f172a !important;
+      border-color: transparent !important;
       color: #ffffff !important;
       box-shadow: none !important;
     }
@@ -283,7 +310,8 @@
       background: #1e293b !important;
     }
     header#navbar.nav-scrolled #menuBtn {
-      color: #1e293b !important;
+      background-color: #f1f5f9 !important;
+      color: #0f172a !important;
     }
     header#navbar.nav-scrolled #mobileMenu {
       background-color: rgba(255, 255, 255, 0.98) !important;
@@ -367,32 +395,34 @@
       
       <!-- Brand Logo (White when transparent, Dark when scrolled) -->
       <a href="index.html" class="flex items-center py-1 group" title="Sri Energy">
-        <img id="navLogoWhite" src="logo-white.png" alt="Sri Energy" class="h-9 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105" />
-        <img id="navLogoDark" src="logo-full.png" alt="Sri Energy" class="h-9 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105" />
+        <img id="navLogoWhite" src="logo-white.png" alt="Sri Energy" class="h-8 sm:h-10 w-auto object-contain transition-transform group-hover:scale-105" />
+        <img id="navLogoDark" src="logo-full.png" alt="Sri Energy" class="h-8 sm:h-10 w-auto object-contain transition-transform group-hover:scale-105" />
       </a>
 
       <!-- Desktop Pill Navigation -->
-      <nav id="navCapsule" class="hidden md:flex items-center gap-0.5 rounded-full px-1.5 py-1 text-[13px] font-medium transition-all duration-300 bg-white/10 backdrop-blur-md border border-white/15 text-white/90">
-        <a id="navHomeLink" href="index.html" class="px-4 py-1.5 rounded-full bg-white/20 text-white shadow-sm transition">Home</a>
-        <a href="solar-panels.html" class="nav-link px-4 py-1.5 rounded-full hover:bg-white/15 hover:text-white transition">Solar Panels</a>
-        <a href="solar-inverters.html" class="nav-link px-4 py-1.5 rounded-full hover:bg-white/15 hover:text-white transition">Inverters</a>
-        <a href="lithium-battery.html" class="nav-link px-4 py-1.5 rounded-full hover:bg-white/15 hover:text-white transition">Batteries</a>
-        <a id="navCalcLink" href="#calculator" class="px-4 py-1.5 rounded-full transition text-emerald-400 font-semibold hover:bg-white/15">Calculator</a>
-        <a href="blog/index.html" class="nav-link px-4 py-1.5 rounded-full hover:bg-white/15 hover:text-white transition">Blog</a>
-        <a href="#contact" class="nav-link px-4 py-1.5 rounded-full hover:bg-white/15 hover:text-white transition">Contact</a>
+      <nav id="navCapsule" class="hidden lg:flex items-center gap-1 rounded-full px-2 py-1.5 text-[13px] font-medium transition-all duration-300">
+        <a id="navHomeLink" href="index.html" class="px-4 py-1.5 rounded-full transition shadow-sm">Home</a>
+        <a href="solar-panels.html" class="nav-link px-4 py-1.5 rounded-full hover:bg-slate-100 hover:text-slate-900 transition">Solar Panels</a>
+        <a href="solar-inverters.html" class="nav-link px-4 py-1.5 rounded-full hover:bg-slate-100 hover:text-slate-900 transition">Inverters</a>
+        <a href="lithium-battery.html" class="nav-link px-4 py-1.5 rounded-full hover:bg-slate-100 hover:text-slate-900 transition">Batteries</a>
+        <a id="navCalcLink" href="#calculator" class="px-4 py-1.5 rounded-full transition text-emerald-600 font-semibold hover:bg-slate-100">Calculator</a>
+        <a href="blog/index.html" class="nav-link px-4 py-1.5 rounded-full hover:bg-slate-100 hover:text-slate-900 transition">Blog</a>
+        <a href="#contact" class="nav-link px-4 py-1.5 rounded-full hover:bg-slate-100 hover:text-slate-900 transition">Contact</a>
       </nav>
 
-      <!-- Right CTA Button -->
-      <a id="navCtaBtn" href="#estimate" class="hidden sm:inline-flex items-center gap-2 text-[13px] font-bold bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 px-4 py-2 rounded-full transition shadow-md">
-        <span>Get A Quote</span>
-        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-      </a>
+      <!-- Right Actions (Estimate pill button + Circle menu button) -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <a id="navCtaBtn" href="#estimate" class="inline-flex items-center gap-1.5 text-xs font-semibold bg-black/25 hover:bg-black/40 backdrop-blur-md border border-white/40 text-white px-4 sm:px-5 py-2.5 rounded-full transition shadow-sm">
+          <span>Get your estimate</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
 
-      <!-- Mobile menu button -->
-      <button id="menuBtn" class="md:hidden p-2 rounded-lg text-white hover:bg-white/10 transition" aria-label="Toggle navigation menu">
-        <svg id="menuIconClosed" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        <svg id="menuIconOpen" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-      </button>
+        <!-- Circular Menu Button -->
+        <button id="menuBtn" class="w-9 h-9 rounded-full bg-white text-slate-900 flex items-center justify-center shadow-md hover:bg-slate-100 transition active:scale-95" aria-label="Toggle navigation menu">
+          <svg id="menuIconClosed" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 8h16M4 16h16"/></svg>
+          <svg id="menuIconOpen" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
 
     </div>
 
@@ -409,126 +439,161 @@
     </div>
   </header>
 
-  <!-- ================= HERO SECTION ================= -->
-  <section id="home" class="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-    <!-- Ambient Solar Glow -->
-    <div class="absolute top-0 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute bottom-0 left-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-    <!-- Background Hero Imagery -->
-    <div class="absolute inset-0 opacity-20 mix-blend-luminosity">
+  <!-- ================= HERO SECTION (SOLUX SAMPLE INSPIRED WITH SRI ENERGY BRANDING) ================= -->
+  <section id="home" class="relative min-h-[92vh] lg:min-h-screen w-full flex flex-col justify-between overflow-hidden text-white pt-24 sm:pt-28 pb-10 sm:pb-14">
+    
+    <!-- Full-Bleed Photography Background (Raw High-Res Photo Provided by User) -->
+    <div class="absolute inset-0 z-0">
       <img
         src="hero-solar.jpg"
-        alt="Rooftop solar installation Mysore"
-        class="w-full h-full object-cover object-center"
+        alt="Powering Mysore with clean rooftop solar energy — Sri Energy"
+        class="w-full h-full object-cover object-[center_right] md:object-center"
       />
+      <!-- Photorealistic Contrast Gradients: Keeps solar panels & sunny ambiance vibrant while ensuring crisp text legibility -->
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/30 to-slate-950/20"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/30 to-transparent"></div>
     </div>
-    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent"></div>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-36 lg:pt-40 pb-16 sm:pb-24 lg:pb-28">
-      <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+    <!-- Top spacer to leave room for floating navbar -->
+    <div class="relative z-10"></div>
+
+    <!-- Bottom Hero Container: Left Headline & CTAs + Right Floating White Estimate Card -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-auto">
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-end">
         
-        <!-- Hero Text Content -->
-        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        <!-- Bottom Left Headline & Action Buttons -->
+        <div class="lg:col-span-7 space-y-6 pb-2 text-left">
           
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold backdrop-blur-sm hero-fade hero-fade-1">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-emerald-400 text-xs font-medium hero-fade hero-fade-1">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
             PM Surya Ghar Certified Partner • Mysuru &amp; Coorg
           </div>
 
-          <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.15] hero-fade hero-fade-2">
-            Power Your Home with Solar. <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300">Slash Electricity Bills by 90%.</span>
+          <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-normal tracking-tight text-white leading-[1.12] drop-shadow-md max-w-xl hero-fade hero-fade-2">
+            Powering tomorrow with clean energy today
           </h1>
 
-          <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal hero-fade hero-fade-2">
-            Certified residential &amp; commercial rooftop solar installations in <strong>Mysore, Coorg, Mandya &amp; Hassan</strong>. Unlock up to <strong>₹78,000 direct government subsidy</strong>, hassle-free DISCOM net metering, and 25-year panel performance warranty.
+          <p class="text-white/90 text-base sm:text-lg font-light max-w-lg leading-relaxed drop-shadow hero-fade hero-fade-2">
+            Save money, save the planet — join the solar revolution with up to <strong>₹78,000 direct PM Surya Ghar subsidy</strong> and 90% power bill savings.
           </p>
 
-          <!-- Badges & USPs -->
-          <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-medium text-slate-300 hero-fade hero-fade-3">
-            <div class="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700/60">
-              <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              <span>₹78k PM Surya Ghar Subsidy</span>
-            </div>
-            <div class="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700/60">
-              <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              <span>25-Year Warranty</span>
-            </div>
-            <div class="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700/60">
-              <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              <span>Zero-Hassle Approvals</span>
-            </div>
-          </div>
-
-          <!-- Hero Action CTAs -->
-          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 hero-fade hero-fade-3">
-            <a href="#estimate" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-slate-950 font-bold text-sm px-7 py-3.5 rounded-full shadow-glow transition-all transform hover:-translate-y-0.5">
-              <span>Book Free Site Survey</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          <!-- Action CTAs -->
+          <div class="pt-2 flex flex-wrap items-center gap-3.5 hero-fade hero-fade-3">
+            <a href="#estimate" class="inline-flex items-center justify-center bg-white hover:bg-emerald-400 hover:text-slate-950 text-slate-950 font-semibold text-sm sm:text-base px-7 py-3.5 rounded-full shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95">
+              Get started
             </a>
-            <a href="#calculator" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800/90 hover:bg-slate-700 text-white font-semibold text-sm px-6 py-3.5 rounded-full border border-slate-700 transition">
-              <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-              <span>Calculate My Savings</span>
+            <a href="#calculator" class="inline-flex items-center gap-2 border border-white/60 bg-black/25 hover:bg-black/40 backdrop-blur-md text-white font-medium text-sm sm:text-base px-6 py-3.5 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg">
+              <span>Calculate savings</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </a>
-          </div>
-
-          <!-- Trust stats -->
-          <div class="pt-6 border-t border-slate-800/80 grid grid-cols-3 gap-4 text-center lg:text-left hero-fade hero-fade-4">
-            <div>
-              <p class="font-display font-bold text-2xl lg:text-3xl text-emerald-400">500+</p>
-              <p class="text-xs text-slate-400 mt-0.5">Roofs Solarized</p>
-            </div>
-            <div>
-              <p class="font-display font-bold text-2xl lg:text-3xl text-white">₹2.4 Cr+</p>
-              <p class="text-xs text-slate-400 mt-0.5">Subsidies Claimed</p>
-            </div>
-            <div>
-              <p class="font-display font-bold text-2xl lg:text-3xl text-amber-400">4.9 ★</p>
-              <p class="text-xs text-slate-400 mt-0.5">Google Rating</p>
-            </div>
           </div>
 
         </div>
 
-        <!-- Hero Visual Showcase Card (User-Selected Hero Image) -->
-        <div class="lg:col-span-5 relative hero-fade hero-fade-4">
-          <!-- Subtle glowing backdrop -->
-          <div class="absolute -inset-1.5 bg-gradient-to-tr from-emerald-500/30 via-teal-400/20 to-amber-400/30 rounded-3xl blur-xl opacity-70"></div>
-          
-          <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-700/80 bg-slate-900 group">
-            <img 
-              src="hero-solar.jpg" 
-              alt="Homeowner enjoying clean rooftop solar power in Mysore" 
-              class="w-full h-[380px] sm:h-[480px] object-cover object-right sm:object-center group-hover:scale-105 transition-transform duration-700"
-            />
+        <!-- Bottom Right Floating White Estimate Card -->
+        <div class="lg:col-span-5 flex justify-end hero-fade hero-fade-3">
+          <div class="bg-white rounded-[32px] p-6 sm:p-8 shadow-2xl w-full max-w-md text-slate-900 border border-slate-100/80">
             
-            <!-- Gradient Overlay for Legibility -->
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/25 to-transparent"></div>
-
-            <!-- Top Floating Pill -->
-            <div class="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
-              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-950/85 backdrop-blur-md border border-emerald-500/40 text-emerald-300 text-xs font-semibold shadow-lg">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                Zero Electricity Bills • 100% Peace of Mind
+            <!-- Top Tag Pill -->
+            <div class="flex items-center gap-2.5">
+              <span class="bg-sky-100 text-sky-700 text-xs font-bold px-3 py-1 rounded-full">
+                PM Surya Ghar
+              </span>
+              <span class="text-xs text-slate-400 font-medium">
+                Fill in the estimate details
               </span>
             </div>
 
-            <!-- Bottom Floating Value Card -->
-            <div class="absolute bottom-4 left-4 right-4 bg-slate-900/95 backdrop-blur-md p-4 rounded-2xl border border-slate-700/80 shadow-xl">
-              <div class="flex items-center justify-between gap-3">
-                <div>
-                  <p class="text-[11px] font-semibold text-emerald-400 uppercase tracking-wider">Typical 3 kW Rooftop</p>
-                  <p class="text-white font-bold text-sm sm:text-base mt-0.5">₹4,500/mo <span class="text-slate-400 line-through text-xs font-normal">bill</span> &rarr; <span class="text-emerald-400 font-extrabold">₹200/mo</span></p>
-                </div>
-                <a href="#estimate" class="inline-flex items-center gap-1.5 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-xs px-3.5 py-2.5 rounded-xl transition shadow">
-                  <span>Get Quote</span>
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </a>
+            <!-- Card Headline -->
+            <h2 class="text-2xl font-bold tracking-tight text-slate-900 mt-4 leading-snug">
+              Just a few clicks away from your free estimate!
+            </h2>
+
+            <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">
+              We're installing across Mysore, Coorg &amp; Mandya — enter your details to receive an instant subsidy blueprint.
+            </p>
+
+            <!-- Quick Form -->
+            <form id="heroQuickForm" class="mt-6 space-y-4" onsubmit="handleHeroQuickEstimate(event)">
+              <div>
+                <input 
+                  type="text" 
+                  id="heroFirstName" 
+                  name="firstName" 
+                  placeholder="First name" 
+                  required
+                  class="w-full py-2.5 border-b border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-slate-950 transition bg-transparent"
+                />
               </div>
-            </div>
+              <div>
+                <input 
+                  type="text" 
+                  id="heroLastName" 
+                  name="lastName" 
+                  placeholder="Last name" 
+                  class="w-full py-2.5 border-b border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-slate-950 transition bg-transparent"
+                />
+              </div>
+              <div>
+                <input 
+                  type="tel" 
+                  id="heroPhone" 
+                  name="phone" 
+                  placeholder="Phone number (WhatsApp)" 
+                  required
+                  class="w-full py-2.5 border-b border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-slate-950 transition bg-transparent"
+                />
+              </div>
+              <div>
+                <input 
+                  type="text" 
+                  id="heroCity" 
+                  name="city" 
+                  placeholder="City / Monthly bill (e.g., Mysore · ₹3,500/mo)" 
+                  required
+                  class="w-full py-2.5 border-b border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-slate-950 transition bg-transparent"
+                />
+              </div>
+
+              <button 
+                type="submit" 
+                class="w-full mt-6 py-3.5 bg-slate-950 hover:bg-emerald-600 text-white font-medium text-sm rounded-full transition-all duration-300 flex items-center justify-center gap-1.5 shadow-xl hover:shadow-emerald-500/30 active:scale-95 group"
+              >
+                <span>Get free estimate</span>
+                <span class="text-base font-light transition-transform group-hover:rotate-90">+</span>
+              </button>
+
+              <div id="heroSuccessMsg" class="hidden text-center text-xs font-semibold text-emerald-600 mt-2 bg-emerald-50 py-2 rounded-xl">
+                ✓ Connecting you to Sri Energy solar engineer on WhatsApp...
+              </div>
+            </form>
+
           </div>
         </div>
 
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ================= IMPACT HIGHLIGHTS & STATS BAR ================= -->
+  <section class="relative bg-slate-900 text-white border-y border-slate-800/80 py-8 px-4 sm:px-6 lg:px-8 z-20">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+      <div class="p-4 rounded-2xl bg-slate-800/40 border border-slate-700/50 reveal">
+        <p class="font-display font-black text-3xl sm:text-4xl text-emerald-400">500+</p>
+        <p class="text-xs sm:text-sm font-medium text-slate-300 mt-1">Roofs Solarized in Mysore</p>
+      </div>
+      <div class="p-4 rounded-2xl bg-slate-800/40 border border-slate-700/50 reveal reveal-delay-1">
+        <p class="font-display font-black text-3xl sm:text-4xl text-white">₹2.4 Cr+</p>
+        <p class="text-xs sm:text-sm font-medium text-slate-300 mt-1">PM Surya Ghar Subsidies</p>
+      </div>
+      <div class="p-4 rounded-2xl bg-slate-800/40 border border-slate-700/50 reveal reveal-delay-2">
+        <p class="font-display font-black text-3xl sm:text-4xl text-amber-400">4.9 ★</p>
+        <p class="text-xs sm:text-sm font-medium text-slate-300 mt-1">Google Customer Rating</p>
+      </div>
+      <div class="p-4 rounded-2xl bg-slate-800/40 border border-slate-700/50 reveal reveal-delay-3">
+        <p class="font-display font-black text-3xl sm:text-4xl text-emerald-400"><span id="statPercent">0</span>%</p>
+        <p class="text-xs sm:text-sm font-medium text-slate-300 mt-1">Average Bill Reduction</p>
       </div>
     </div>
   </section>
@@ -1633,6 +1698,23 @@
     }
 
     // 4. Lead Generation Forms
+    function handleHeroQuickEstimate(e) {
+      e.preventDefault();
+      const first = document.getElementById('heroFirstName')?.value.trim() || '';
+      const last = document.getElementById('heroLastName')?.value.trim() || '';
+      const phone = document.getElementById('heroPhone')?.value.trim() || '';
+      const city = document.getElementById('heroCity')?.value.trim() || '';
+      
+      const successMsg = document.getElementById('heroSuccessMsg');
+      if (successMsg) successMsg.classList.remove('hidden');
+
+      const waMsg = encodeURIComponent(`Hi Sri Energy, I request a Free Rooftop Solar Estimate & PM Surya Ghar Subsidy Details.\n\nName: ${first} ${last}\nPhone: ${phone}\nLocation & Bill: ${city}`);
+      const waUrl = `https://wa.me/919019914411?text=${waMsg}`;
+
+      setTimeout(() => {
+        window.open(waUrl, '_blank');
+      }, 500);
+    }
     function handleQuoteSubmit(e) {
       e.preventDefault();
       const name = document.getElementById('fullName').value.trim();
