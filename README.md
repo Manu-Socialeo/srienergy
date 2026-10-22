@@ -2,6 +2,12 @@
 
 Official website and resources for **Sri Energy**, providing PM Surya Ghar Muft Bijli Yojana eligible rooftop solar installations, solar panels, hybrid/on-grid inverters, and lithium battery storage in Mysore, Coorg, Mandya, Hassan, and surrounding regions in Karnataka.
 
+[![Vercel Deployment](https://img.shields.io/badge/Deployment-Vercel-black?style=flat&logo=vercel)](https://srienergy.vercel.app/)
+[![Live Site](https://img.shields.io/badge/Live_Site-srienergy.vercel.app-blue)](https://srienergy.vercel.app/)
+
+🔗 **Live URL:** [https://srienergy.vercel.app/](https://srienergy.vercel.app/)
+
+
 ## 🌐 Website Pages
 
 - **Home (`index.html`)**: Complete rooftop solar solutions, PM Surya Ghar subsidy details, savings calculator, testimonials, FAQs, and quote request form.
@@ -37,4 +43,5 @@ npx serve .
 - **Phone**: +91 9019914411
 - **Email**: subaiah@srienergy.in
 - **Location**: P.G Street, Sahithya Bhavan Rd, Vijaynagar, Mysuru, Karnataka 570002
-- **Website**: [https://srienergy.in](https://srienergy.in)
+- **Live App (Vercel)**: [https://srienergy.vercel.app](https://srienergy.vercel.app)
+- **Domain**: [https://srienergy.in](https://srienergy.in)
