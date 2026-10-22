@@ -1,0 +1,7 @@
+# Ignore build, scratch, and local billing deliverables
+*.pdf
+scratch/
+.tempmediaStorage/
+*.log
+.DS_Store
+Thumbs.db
