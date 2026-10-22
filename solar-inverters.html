@@ -1,123 +1,433 @@
 <!DOCTYPE html>
-<html lang="en-IN">
+<html lang="en-IN" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Solar Inverters Mysore | On-Grid, Hybrid & Micro | Sri Energy</title>
   <meta name="description" content="Solar inverters in Mysore & Coorg — Grid Tie single/three phase, Hybrid (3–80kW), Micro inverters. High efficiency, Wi-Fi monitoring. Free quote from Sri Energy." />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="https://srienergy.in/solar-inverters.html" />
   <link rel="icon" href="logo-icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo-icon.png" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Open Graph & Twitter -->
   <meta property="og:title" content="Solar Inverters Mysore | Sri Energy" />
-  <meta property="og:description" content="Grid Tie, Hybrid & Micro inverters for homes and businesses in Mysore & Coorg." />
+  <meta property="og:description" content="Grid Tie, Hybrid & Micro inverters for homes and businesses in Mysore & Coorg. PM Surya Ghar eligible." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://srienergy.in/solar-inverters.html" />
   <meta property="og:locale" content="en_IN" />
   <meta property="og:image" content="https://srienergy.in/logo-full.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']},boxShadow:{soft:'0 20px 50px -12px rgba(0,0,0,0.18)',card:'0 8px 30px -6px rgba(0,0,0,0.1)'}}}}</script>
-  <style>body{font-family:'Inter',system-ui,sans-serif}</style>
+
+  <!-- Schema Markup -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"CollectionPage","name":"Solar Inverters","description":"On-Grid, Hybrid and Micro solar inverters by Sri Energy","url":"https://srienergy.in/solar-inverters.html","provider":{"@type":"LocalBusiness","name":"Sri Energy","telephone":"+919019914411","address":{"@type":"PostalAddress","streetAddress":"P.G Street, Sahithya Bhavan Rd, Vijaynagar","addressLocality":"Mysuru","postalCode":"570002","addressCountry":"IN"}},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://srienergy.in/"},{"@type":"ListItem","position":2,"name":"Solar Inverters","item":"https://srienergy.in/solar-inverters.html"}]}}
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Solar Inverters Mysore",
+    "description": "On-Grid, Hybrid and Micro solar inverters by Sri Energy for homes and industries in Mysore & Coorg",
+    "url": "https://srienergy.in/solar-inverters.html",
+    "isPartOf": {"@type": "WebSite", "name": "Sri Energy", "url": "https://srienergy.in"},
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Sri Energy",
+      "telephone": "+919019914411",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "P.G Street, Sahithya Bhavan Rd, Vijaynagar",
+        "addressLocality": "Mysuru",
+        "postalCode": "570002",
+        "addressCountry": "IN"
+      }
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srienergy.in/"},
+        {"@type": "ListItem", "position": 2, "name": "Solar Inverters", "item": "https://srienergy.in/solar-inverters.html"}
+      ]
+    }
+  }
   </script>
+
+  <!-- Tailwind CSS & Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+            }
+          },
+          boxShadow: {
+            'card': '0 10px 30px -10px rgba(15, 23, 42, 0.08)',
+            'card-hover': '0 20px 40px -15px rgba(15, 23, 42, 0.16)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    h1, h2, h3, .font-display { font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .pb-safe-action { padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px)); }
+    @media (min-width: 768px) { .pb-safe-action { padding-bottom: 0; } }
+  </style>
 </head>
-<body class="bg-slate-100 text-slate-900 antialiased">
-  <div class="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 py-6 md:py-12 px-3 md:px-8">
-    <div class="max-w-6xl mx-auto bg-white rounded-[28px] md:rounded-[32px] overflow-hidden shadow-soft border border-white/10">
-      <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
-        <div class="flex items-center justify-between px-5 md:px-8 py-4">
-          <a href="index.html" class="flex items-center gap-2">
-            <img src="logo-sun.png" alt="Sri Energy" class="h-9 w-9 object-contain" />
-            <span class="font-semibold text-lg tracking-tight text-slate-900">Energy</span>
-          </a>
-          <nav class="hidden md:flex items-center gap-0.5 bg-slate-100/90 rounded-full px-1.5 py-1 text-[13px] font-medium text-slate-700">
-            <a href="index.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition">Home</a>
-            <a href="solar-panels.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition">Solar Panels</a>
-            <a href="solar-inverters.html" class="px-4 py-1.5 rounded-full bg-white shadow-sm">Inverters</a>
-            <a href="lithium-battery.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition">Batteries</a>
-            <a href="blog/index.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition">Blog</a>
-            <a href="index.html#contact" class="px-4 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition">Contact</a>
-          </nav>
-          <a href="index.html#estimate" class="hidden sm:inline-flex items-center gap-2 text-[13px] font-medium bg-slate-900 text-white px-4 py-2 rounded-full hover:bg-slate-800 transition">Get A Quote</a>
-        </div>
-      </header>
+<body class="bg-slate-50 text-slate-900 antialiased pb-safe-action selection:bg-brand-500 selection:text-white">
 
-      <section class="relative h-64 md:h-80 overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" class="absolute inset-0 w-full h-full object-cover" alt="Solar inverter system" />
-        <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-black/20"></div>
-        <div class="relative h-full flex flex-col justify-end px-5 md:px-10 pb-10">
-          <p class="text-green-400 text-xs font-medium tracking-widest uppercase mb-2">Products</p>
-          <h1 class="text-3xl md:text-4xl font-semibold text-white">Solar Inverters</h1>
-          <p class="text-white/80 text-sm md:text-base mt-2 max-w-xl">Grid Tie, Hybrid & Micro inverters — high efficiency, remote monitoring, for homes & industries in Mysore & Coorg.</p>
-        </div>
-      </section>
-
-      <section class="px-5 md:px-10 py-12 md:py-16">
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <article class="bg-white rounded-[20px] border border-slate-100 shadow-card overflow-hidden hover:shadow-lg transition">
-            <div class="h-36 bg-slate-100 overflow-hidden"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="Single phase grid tie inverter" /></div>
-            <div class="p-5">
-              <span class="text-xs font-medium text-green-600 bg-green-50 px-2.5 py-1 rounded-full">1–6 kW</span>
-              <h2 class="font-semibold text-slate-900 mt-3 text-base">Grid Tie Inverter — Single Phase</h2>
-              <p class="text-sm text-slate-500 mt-2 leading-relaxed">VS 101S–602S. Intelligent MPPT, superior protection, heat-resistant coating, smart remote monitoring. Ideal for residential rooftop systems.</p>
-            </div>
-          </article>
-          <article class="bg-white rounded-[20px] border border-slate-100 shadow-card overflow-hidden hover:shadow-lg transition">
-            <div class="h-36 bg-slate-100 overflow-hidden"><img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="Three phase grid tie inverter" /></div>
-            <div class="p-5">
-              <span class="text-xs font-medium text-green-600 bg-green-50 px-2.5 py-1 rounded-full">4–350 kW</span>
-              <h2 class="font-semibold text-slate-900 mt-3 text-base">Grid Tie Inverter — Three Phase</h2>
-              <p class="text-sm text-slate-500 mt-2 leading-relaxed">Up to 98.9% efficiency. Wi-Fi/GPRS monitoring, Type II surge protection, Zero Export & Anti-PID options. For commercial & industrial loads.</p>
-            </div>
-          </article>
-          <article class="bg-white rounded-[20px] border border-slate-100 shadow-card overflow-hidden hover:shadow-lg transition">
-            <div class="h-36 bg-slate-100 overflow-hidden"><img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="Hybrid inverter" /></div>
-            <div class="p-5">
-              <span class="text-xs font-medium text-green-600 bg-green-50 px-2.5 py-1 rounded-full">3–80 kW</span>
-              <h2 class="font-semibold text-slate-900 mt-3 text-base">Hybrid Inverter VS (HY03S–HY80T)</h2>
-              <p class="text-sm text-slate-500 mt-2 leading-relaxed">On-Grid + Off-Grid + Hybrid. Ultra-fast 4ms UPS switching. Compatible with Li-ion, Lead Acid & LiFePO4 batteries. Parallel scalable.</p>
-            </div>
-          </article>
-          <article class="bg-white rounded-[20px] border border-slate-100 shadow-card overflow-hidden hover:shadow-lg transition">
-            <div class="h-36 bg-slate-100 overflow-hidden"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="Three phase hybrid low voltage" /></div>
-            <div class="p-5">
-              <span class="text-xs font-medium text-green-600 bg-green-50 px-2.5 py-1 rounded-full">Low Voltage</span>
-              <h2 class="font-semibold text-slate-900 mt-3 text-base">Hybrid Inverter — Three Phase LV</h2>
-              <p class="text-sm text-slate-500 mt-2 leading-relaxed">Seamless solar + grid + battery integration. Advanced load management and multi-battery support for residential & commercial use.</p>
-            </div>
-          </article>
-          <article class="bg-white rounded-[20px] border border-slate-100 shadow-card overflow-hidden hover:shadow-lg transition">
-            <div class="h-36 bg-slate-100 overflow-hidden"><img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="Three phase hybrid high voltage" /></div>
-            <div class="p-5">
-              <span class="text-xs font-medium text-green-600 bg-green-50 px-2.5 py-1 rounded-full">High Voltage</span>
-              <h2 class="font-semibold text-slate-900 mt-3 text-base">Hybrid Inverter — Three Phase HV</h2>
-              <p class="text-sm text-slate-500 mt-2 leading-relaxed">Built for commercial & industrial applications. High efficiency energy management with uninterrupted power supply.</p>
-            </div>
-          </article>
-          <article class="bg-white rounded-[20px] border border-slate-100 shadow-card overflow-hidden hover:shadow-lg transition">
-            <div class="h-36 bg-slate-100 overflow-hidden"><img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="Micro inverter" /></div>
-            <div class="p-5">
-              <span class="text-xs font-medium text-green-600 bg-green-50 px-2.5 py-1 rounded-full">0.6–1.2 kW</span>
-              <h2 class="font-semibold text-slate-900 mt-3 text-base">Micro Inverter & Hybrid Micro</h2>
-              <p class="text-sm text-slate-500 mt-2 leading-relaxed">Independent MPPT per panel, higher yield in partial shade. IP67 Hybrid Micro with Wi-Fi, dual PV inputs, 4ms UPS switching.</p>
-            </div>
-          </article>
-        </div>
-        <div class="mt-12 text-center">
-          <a href="index.html#estimate" class="inline-flex items-center gap-2 bg-slate-900 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-slate-800 transition">Get A Quote for Inverters →</a>
-        </div>
-      </section>
-
-      <footer class="bg-slate-900 text-white px-5 md:px-10 py-10">
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
-          <a href="index.html" class="flex items-center gap-2"><img src="logo-sun.png" alt="Sri Energy" class="h-8 w-8 object-contain" /><span class="font-semibold text-white">Energy</span></a>
-          <p class="text-slate-400 text-xs">+91 9019914411 · subaiah@srienergy.in · Mysuru</p>
-          <p class="text-slate-500 text-xs">© 2026 Sri Energy</p>
-        </div>
-      </footer>
+  <!-- ================= TOP NOTIFICATION ================= -->
+  <div class="bg-slate-900 text-white text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <span class="text-slate-300">
+        ⚡ Smart Inverters: Up to <strong class="text-white">98.9% Efficiency</strong> with Wi-Fi &amp; Mobile App Monitoring
+      </span>
+      <a href="tel:+919019914411" class="hidden sm:flex items-center gap-1.5 text-emerald-400 font-semibold hover:underline">
+        <span>+91 9019914411</span>
+      </a>
     </div>
   </div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2.5 group">
+          <div class="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200/60 flex items-center justify-center p-1.5 shadow-sm group-hover:scale-105 transition-transform">
+            <img src="logo-sun.png" alt="Sri Energy Logo" class="h-full w-full object-contain" />
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-xl tracking-tight text-slate-900 group-hover:text-emerald-600 transition-colors">
+              Sri Energy
+            </span>
+            <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400 -mt-1">
+              Mysuru &amp; Coorg
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-1 bg-slate-100/80 p-1.5 rounded-full border border-slate-200/70 text-[13px] font-semibold text-slate-700">
+          <a href="index.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 transition">Home</a>
+          <a href="solar-panels.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 transition">Solar Panels</a>
+          <a href="solar-inverters.html" class="px-4 py-1.5 rounded-full bg-white text-slate-900 shadow-sm transition">Inverters</a>
+          <a href="lithium-battery.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 transition">Batteries</a>
+          <a href="index.html#calculator" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 transition">Calculator</a>
+          <a href="blog/index.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 transition">Blog</a>
+          <a href="index.html#contact" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 transition">Contact</a>
+        </nav>
+
+        <!-- Right Action Button -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="index.html#estimate" class="inline-flex items-center gap-2 text-sm font-semibold bg-slate-900 text-white px-5 py-2.5 rounded-full hover:bg-emerald-600 transition">
+            <span>Get A Quote</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <button id="menuBtn" class="lg:hidden p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 shadow-xl px-5 pt-3 pb-6 space-y-2">
+      <a href="index.html" class="block px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Home</a>
+      <a href="solar-panels.html" class="block px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Solar Panels</a>
+      <a href="solar-inverters.html" class="block px-3 py-2 rounded-xl font-semibold text-emerald-800 bg-emerald-50">Solar Inverters</a>
+      <a href="lithium-battery.html" class="block px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Lithium Batteries</a>
+      <a href="blog/index.html" class="block px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Solar Blog</a>
+      <a href="index.html#contact" class="block px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Contact Us</a>
+      <a href="index.html#estimate" class="block text-center font-bold bg-emerald-600 text-white py-2.5 rounded-xl mt-3">Request Free Quote</a>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="relative bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white py-16 sm:py-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-25 mix-blend-luminosity">
+      <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1800&q=80" alt="Solar inverters" class="w-full h-full object-cover" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4">
+          CHESCOM &amp; BESCOM Net-Metering Compatible
+        </span>
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight">
+          Solar Inverters in Mysore &amp; Coorg
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
+          On-Grid, Hybrid, and Micro Inverter architectures. Ultra-fast 4ms UPS switching, IP65 weatherproofing, intelligent MPPT tracking, and live mobile monitoring.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRODUCT CATALOG ================= -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+        <div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 tracking-tight">
+            Advanced Solar Inverter Lineup
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">
+            Engineered for seamless grid integration, battery charging, and zero-export compliance.
+          </p>
+        </div>
+        <span class="text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 px-3 py-1.5 rounded-full w-fit">
+          5 to 10 Year Comprehensive Warranty
+        </span>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Inverter 1 -->
+        <article class="bg-slate-50 rounded-2xl border border-slate-200/80 shadow-card overflow-hidden hover:shadow-card-hover hover:border-emerald-300 transition-all flex flex-col justify-between">
+          <div>
+            <div class="h-44 bg-slate-100 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="Single phase grid tie inverter" />
+              <span class="absolute top-3 left-3 bg-slate-900/85 backdrop-blur-sm text-emerald-400 text-xs font-bold px-3 py-1 rounded-full">
+                1–6 kW Single Phase
+              </span>
+            </div>
+            <div class="p-6">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-100/60 px-2.5 py-0.5 rounded-md">Residential On-Grid</span>
+              <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Grid Tie Inverter — Single Phase</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                VS 101S–602S. Dual MPPT trackers, intelligent cooling, IP65 protection, and smart remote monitoring. The default choice for PM Surya Ghar 2 kW &amp; 3 kW home rooftops.
+              </p>
+              <div class="mt-4 pt-3 border-t border-slate-200/80 grid grid-cols-2 gap-2 text-[11px] text-slate-500 font-medium">
+                <div>Efficiency: <strong class="text-slate-800">97.8%</strong></div>
+                <div>Monitoring: <strong class="text-slate-800">Wi-Fi / App</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20am%20inquiring%20about%20Single%20Phase%20Grid%20Tie%20Inverters." target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-xl font-bold text-xs bg-slate-900 text-white hover:bg-emerald-600 transition">
+              <span>Inquire Specs &amp; Price</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Inverter 2 -->
+        <article class="bg-slate-50 rounded-2xl border border-slate-200/80 shadow-card overflow-hidden hover:shadow-card-hover hover:border-emerald-300 transition-all flex flex-col justify-between">
+          <div>
+            <div class="h-44 bg-slate-100 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="Three phase grid tie inverter" />
+              <span class="absolute top-3 left-3 bg-slate-900/85 backdrop-blur-sm text-emerald-400 text-xs font-bold px-3 py-1 rounded-full">
+                4–350 kW Three Phase
+              </span>
+            </div>
+            <div class="p-6">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-blue-700 bg-blue-100/60 px-2.5 py-0.5 rounded-md">Commercial On-Grid</span>
+              <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Grid Tie Inverter — Three Phase</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Up to 98.9% efficiency. Wi-Fi/GPRS telemetry, Type II AC/DC surge protection, zero-export limitation, and anti-PID feature for commercial &amp; industrial factories in Mysore.
+              </p>
+              <div class="mt-4 pt-3 border-t border-slate-200/80 grid grid-cols-2 gap-2 text-[11px] text-slate-500 font-medium">
+                <div>Efficiency: <strong class="text-slate-800">98.9%</strong></div>
+                <div>Surge: <strong class="text-slate-800">Type II SPD</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20am%20inquiring%20about%20Three%20Phase%20Grid%20Tie%20Inverters." target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-xl font-bold text-xs bg-slate-900 text-white hover:bg-emerald-600 transition">
+              <span>Inquire Specs &amp; Price</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Inverter 3 -->
+        <article class="bg-slate-50 rounded-2xl border border-slate-200/80 shadow-card overflow-hidden hover:shadow-card-hover hover:border-emerald-300 transition-all flex flex-col justify-between">
+          <div>
+            <div class="h-44 bg-slate-100 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="Hybrid inverter" />
+              <span class="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                3–80 kW Hybrid
+              </span>
+            </div>
+            <div class="p-6">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-100/60 px-2.5 py-0.5 rounded-md">Grid + Battery Backup</span>
+              <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Hybrid Inverter VS (HY03S–HY80T)</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Tri-mode operation: On-grid, Off-grid, and Hybrid. Lightning fast 4ms UPS switching prevents computers and medical equipment from rebooting during power outages.
+              </p>
+              <div class="mt-4 pt-3 border-t border-slate-200/80 grid grid-cols-2 gap-2 text-[11px] text-slate-500 font-medium">
+                <div>Switching: <strong class="text-slate-800">&lt; 4ms UPS</strong></div>
+                <div>Battery: <strong class="text-slate-800">LiFePO4 Compatible</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20am%20inquiring%20about%20Hybrid%20Inverters." target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-xl font-bold text-xs bg-slate-900 text-white hover:bg-emerald-600 transition">
+              <span>Inquire Specs &amp; Price</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Inverter 4 -->
+        <article class="bg-slate-50 rounded-2xl border border-slate-200/80 shadow-card overflow-hidden hover:shadow-card-hover hover:border-emerald-300 transition-all flex flex-col justify-between">
+          <div>
+            <div class="h-44 bg-slate-100 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="Three phase hybrid low voltage" />
+              <span class="absolute top-3 left-3 bg-slate-900/85 backdrop-blur-sm text-emerald-400 text-xs font-bold px-3 py-1 rounded-full">
+                Low Voltage (48V)
+              </span>
+            </div>
+            <div class="p-6">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-700 bg-slate-200/60 px-2.5 py-0.5 rounded-md">Estate &amp; Villa Systems</span>
+              <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Hybrid Inverter — Three Phase LV</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Connects directly to 48V/51.2V modular LiFePO4 battery banks. Exceptional surge capacity for starting heavy inductive loads like water pump motors and air conditioners.
+              </p>
+              <div class="mt-4 pt-3 border-t border-slate-200/80 grid grid-cols-2 gap-2 text-[11px] text-slate-500 font-medium">
+                <div>Battery: <strong class="text-slate-800">48V LV System</strong></div>
+                <div>Parallel: <strong class="text-slate-800">Up to 10 units</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20am%20inquiring%20about%20Three%20Phase%20LV%20Hybrid%20Inverters." target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-xl font-bold text-xs bg-slate-900 text-white hover:bg-emerald-600 transition">
+              <span>Inquire Specs &amp; Price</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Inverter 5 -->
+        <article class="bg-slate-50 rounded-2xl border border-slate-200/80 shadow-card overflow-hidden hover:shadow-card-hover hover:border-emerald-300 transition-all flex flex-col justify-between">
+          <div>
+            <div class="h-44 bg-slate-100 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="Three phase hybrid high voltage" />
+              <span class="absolute top-3 left-3 bg-amber-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-full">
+                High Voltage (150–800V)
+              </span>
+            </div>
+            <div class="p-6">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100/60 px-2.5 py-0.5 rounded-md">C&amp;I Industrial Storage</span>
+              <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Hybrid Inverter — Three Phase HV</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                High-voltage battery architecture with lower transmission loss. Designed for hospitals, hotels, institutions, and industrial plants requiring continuous uninterrupted power.
+              </p>
+              <div class="mt-4 pt-3 border-t border-slate-200/80 grid grid-cols-2 gap-2 text-[11px] text-slate-500 font-medium">
+                <div>Efficiency: <strong class="text-slate-800">&gt; 98.4%</strong></div>
+                <div>DC Ratio: <strong class="text-slate-800">1.6x Overload</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20am%20inquiring%20about%20High%20Voltage%20Hybrid%20Inverters." target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-xl font-bold text-xs bg-slate-900 text-white hover:bg-emerald-600 transition">
+              <span>Inquire Specs &amp; Price</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Inverter 6 -->
+        <article class="bg-slate-50 rounded-2xl border border-slate-200/80 shadow-card overflow-hidden hover:shadow-card-hover hover:border-emerald-300 transition-all flex flex-col justify-between">
+          <div>
+            <div class="h-44 bg-slate-100 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="Micro inverter" />
+              <span class="absolute top-3 left-3 bg-slate-900/85 backdrop-blur-sm text-emerald-400 text-xs font-bold px-3 py-1 rounded-full">
+                0.6–1.2 kW Micro
+              </span>
+            </div>
+            <div class="p-6">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-100/60 px-2.5 py-0.5 rounded-md">Module-Level MPPT</span>
+              <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Micro Inverter &amp; Hybrid Micro</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Independent MPPT tracking per solar panel. Prevents tree or chimney shade on one panel from reducing the generation of the rest of the array. IP67 waterproof.
+              </p>
+              <div class="mt-4 pt-3 border-t border-slate-200/80 grid grid-cols-2 gap-2 text-[11px] text-slate-500 font-medium">
+                <div>Rating: <strong class="text-slate-800">IP67 Waterproof</strong></div>
+                <div>Safety: <strong class="text-slate-800">Rapid DC Shutdown</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20am%20inquiring%20about%20Micro%20Inverters." target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-xl font-bold text-xs bg-slate-900 text-white hover:bg-emerald-600 transition">
+              <span>Inquire Specs &amp; Price</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Bottom Banner -->
+      <div class="mt-16 bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-8 sm:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-card">
+        <div class="space-y-2 text-center md:text-left">
+          <h3 class="font-display font-extrabold text-2xl text-white">Need guidance choosing on-grid vs hybrid?</h3>
+          <p class="text-xs sm:text-sm text-slate-300 max-w-xl">
+            Our engineers assess your local grid stability and recommend the most cost-effective inverter for your home or business.
+          </p>
+        </div>
+        <a href="index.html#estimate" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold text-sm px-7 py-3.5 rounded-full transition shadow-md shrink-0">
+          <span>Get Free Recommendation</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-slate-950 text-white border-t border-slate-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <div class="flex items-center gap-2">
+        <img src="logo-sun.png" alt="Sri Energy" class="h-7 w-7 object-contain" />
+        <span class="font-display font-bold text-sm text-white">Sri Energy Mysuru</span>
+      </div>
+      <p>+91 9019914411 · subaiah@srienergy.in · Vijaynagar, Mysuru 570002</p>
+      <p>© 2026 Sri Energy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ================= STICKY MOBILE BOTTOM BAR ================= -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2 shadow-2xl">
+    <div class="grid grid-cols-3 gap-2 text-center text-xs font-semibold">
+      <a href="tel:+919019914411" class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-slate-100 text-slate-800">
+        <span>Call</span>
+      </a>
+      <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20am%20asking%20about%20Solar%20Inverters" target="_blank" rel="noopener" class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-emerald-50 text-emerald-800 font-bold">
+        <span>WhatsApp</span>
+      </a>
+      <a href="index.html#estimate" class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-emerald-600 text-white font-bold shadow-md">
+        <span>Free Quote</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
 </body>
 </html>

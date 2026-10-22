@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en-IN">
+<html lang="en-IN" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Sri Energy Mysore | PM Surya Ghar Rooftop Solar, Inverters & Batteries</title>
   <meta name="description" content="Sri Energy installs PM Surya Ghar eligible rooftop solar in Mysore & Coorg. Solar panels, hybrid inverters, lithium batteries & solar pumpsets. Free site survey. Call +91 9019914411." />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -15,6 +15,7 @@
   <link rel="icon" href="logo-icon.png" type="image/png" />
   <link rel="apple-touch-icon" href="logo-icon.png" />
   <meta name="theme-color" content="#0f172a" />
+
   <!-- Open Graph -->
   <meta property="og:title" content="Sri Energy | Rooftop Solar Mysore & Coorg — PM Surya Ghar" />
   <meta property="og:description" content="PM Surya Ghar eligible rooftop solar, panels, hybrid inverters & lithium batteries. Free quote in Mysore, Coorg, Mandya, Hassan." />
@@ -24,12 +25,14 @@
   <meta property="og:site_name" content="Sri Energy" />
   <meta property="og:image" content="https://srienergy.in/logo-full.png" />
   <meta property="og:image:alt" content="Sri Energy — Solar Solutions Mysore" />
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Sri Energy | Rooftop Solar Mysore & Coorg" />
   <meta name="twitter:description" content="PM Surya Ghar eligible rooftop solar, panels, inverters & batteries. Free quote." />
   <meta name="twitter:image" content="https://srienergy.in/logo-full.png" />
-  <!-- LocalBusiness + Organization + Services + FAQ schema -->
+
+  <!-- Schema Markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -65,7 +68,6 @@
           {"@type": "City", "name": "Hassan"},
           {"@type": "City", "name": "Bengaluru"}
         ],
-        "sameAs": [],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Solar Solutions",
@@ -127,47 +129,69 @@
     ]
   }
   </script>
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
           colors: {
-            solux: {
-              green: '#22c55e',
-              dark: '#0f172a',
-              card: '#f8fafc',
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              900: '#064e3b',
+            },
+            amber: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            },
+            dark: {
+              900: '#0b0f19',
+              800: '#0f172a',
+              700: '#1e293b',
             }
           },
           boxShadow: {
-            soft: '0 20px 50px -12px rgba(0,0,0,0.18)',
-            card: '0 8px 30px -6px rgba(0,0,0,0.1)',
-            float: '0 25px 50px -12px rgba(0,0,0,0.25)',
-          },
-          borderRadius: {
-            '4xl': '2rem',
-            '5xl': '2.5rem',
+            'glow': '0 0 35px -5px rgba(16, 185, 129, 0.25)',
+            'card': '0 10px 30px -10px rgba(15, 23, 42, 0.08)',
+            'card-hover': '0 20px 40px -15px rgba(15, 23, 42, 0.16)',
+            'float': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
           }
         }
       }
     }
   </script>
+
   <style>
-    * { scroll-behavior: smooth; }
+    /* Base typography */
+    h1, h2, h3, h4, .font-display { font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; }
     body { font-family: 'Inter', system-ui, sans-serif; }
 
-    /* Continuous marquee */
-    .marquee {
+    /* Continuous smooth marquee */
+    .marquee-wrapper {
       overflow: hidden;
       white-space: nowrap;
+      mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
     }
     .marquee-track {
       display: inline-flex;
-      animation: marquee 35s linear infinite;
+      animation: marquee 30s linear infinite;
     }
     .marquee-track:hover { animation-play-state: paused; }
     @keyframes marquee {
@@ -175,11 +199,11 @@
       100% { transform: translateX(-50%); }
     }
 
-    /* Scroll reveal */
+    /* Scroll animations */
     .reveal {
       opacity: 0;
-      transform: translateY(32px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
+      transform: translateY(24px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .reveal.visible {
       opacity: 1;
@@ -188,723 +212,1322 @@
     .reveal-delay-1 { transition-delay: 0.1s; }
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
 
-    /* Hero entrance */
-    .hero-fade {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: heroIn 0.9s ease forwards;
-    }
-    .hero-fade-1 { animation-delay: 0.15s; }
-    .hero-fade-2 { animation-delay: 0.3s; }
-    .hero-fade-3 { animation-delay: 0.45s; }
-    .hero-fade-4 { animation-delay: 0.6s; }
-    @keyframes heroIn {
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Floating form card */
-    .float-card {
-      animation: float 6s ease-in-out infinite;
-      z-index: 20;
-    }
-    @keyframes float {
+    /* Subtle floating animation */
+    @keyframes floatGentle {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
+      50% { transform: translateY(-6px); }
     }
-    /* Force form visible after animation (fallback) */
-    #estimate {
-      opacity: 1 !important;
-      transform: none !important;
-      animation: float 6s ease-in-out infinite;
+    .animate-float {
+      animation: floatGentle 5s ease-in-out infinite;
     }
 
-    /* Process step active */
-    .process-step {
-      transition: all 0.3s ease;
+    /* Mobile safe area padding for bottom action bar */
+    .pb-safe-action {
+      padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
     }
-    .process-step.active {
-      background: #0f172a;
-      color: white;
-    }
-    .process-step.active p { color: #94a3b8; }
-
-    /* Testimonial highlight */
-    .testimonial-card {
-      transition: all 0.35s ease;
-    }
-    .testimonial-card:hover,
-    .testimonial-card.active {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.15);
+    @media (min-width: 768px) {
+      .pb-safe-action { padding-bottom: 0; }
     }
 
-    /* Map dots */
-    .map-dot {
-      transition: transform 0.2s ease;
+    /* Custom range slider for solar calculator */
+    input[type=range] {
+      accent-color: #059669;
     }
-    .map-dot:hover { transform: scale(1.4); }
-
-    /* Nav blur */
-    .nav-scrolled {
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 1px 0 rgba(0,0,0,0.05);
-    }
-
-    /* Smooth image hover */
-    .img-hover { transition: transform 0.5s ease; }
-    .img-hover:hover { transform: scale(1.04); }
-
-    /* Custom scrollbar */
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #f1f5f9; }
-    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
   </style>
 </head>
-<body class="bg-slate-100 text-slate-900 antialiased">
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-brand-500 selection:text-white pb-safe-action">
 
-  <!-- Outer mockup feel (optional dark background) -->
-  <div class="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 py-6 md:py-12 px-3 md:px-8">
-    <div class="max-w-6xl mx-auto bg-white rounded-[28px] md:rounded-[32px] overflow-hidden shadow-soft border border-white/10">
+  <!-- ================= TOP NOTIFICATION / SUBSIDY BAR ================= -->
+  <div class="bg-slate-900 text-white text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
+      <div class="flex items-center gap-2 justify-center">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+          Govt Scheme
+        </span>
+        <span class="text-slate-300">
+          PM Surya Ghar Muft Bijli Yojana: Get up to <strong class="text-white">₹78,000 Subsidy</strong> on rooftop solar in Karnataka
+        </span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-400 text-xs">
+        <a href="tel:+919019914411" class="hover:text-emerald-400 flex items-center gap-1 font-medium transition">
+          <svg class="w-3.5 h-3.5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/></svg>
+          +91 9019914411
+        </a>
+        <span class="hidden sm:inline text-slate-700">|</span>
+        <span class="hidden sm:inline text-slate-400">Mysuru &amp; Coorg</span>
+      </div>
+    </div>
+  </div>
 
-      <!-- ========== NAV ========== -->
-      <header id="navbar" class="sticky top-0 z-50 transition-all duration-300">
-        <div class="flex items-center justify-between px-5 md:px-8 py-4">
-          <a href="index.html" class="flex items-center gap-2">
-            <img src="logo-sun.png" alt="Sri Energy" class="h-9 w-9 object-contain" />
-            <span class="font-semibold text-lg tracking-tight text-slate-900">Energy</span>
+  <!-- ================= MAIN HEADER / NAVBAR ================= -->
+  <header id="navbar" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2.5 group">
+          <div class="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200/60 flex items-center justify-center p-1.5 shadow-sm group-hover:scale-105 transition-transform">
+            <img src="logo-sun.png" alt="Sri Energy Logo" class="h-full w-full object-contain" />
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-xl tracking-tight text-slate-900 group-hover:text-emerald-600 transition-colors">
+              Sri Energy
+            </span>
+            <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400 -mt-1">
+              Mysuru &amp; Coorg
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-1 bg-slate-100/80 p-1.5 rounded-full border border-slate-200/70 text-[13px] font-semibold text-slate-700">
+          <a href="index.html" class="px-4 py-1.5 rounded-full bg-white text-slate-900 shadow-sm transition">Home</a>
+          <a href="solar-panels.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 hover:shadow-sm transition">Solar Panels</a>
+          <a href="solar-inverters.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 hover:shadow-sm transition">Inverters</a>
+          <a href="lithium-battery.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 hover:shadow-sm transition">Batteries</a>
+          <a href="#calculator" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 hover:shadow-sm transition text-emerald-700 flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Savings Calculator
           </a>
-          <nav class="hidden md:flex items-center gap-0.5 bg-slate-100/90 rounded-full px-1.5 py-1 text-[13px] font-medium text-slate-700">
-            <a href="#home" class="px-4 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition">Home</a>
-            <a href="solar-panels.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition">Solar Panels</a>
-            <a href="solar-inverters.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition">Inverters</a>
-            <a href="lithium-battery.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition">Batteries</a>
-            <a href="blog/index.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition">Blog</a>
-            <a href="#contact" class="px-4 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition">Contact</a>
-          </nav>
-          <a href="#estimate" class="hidden sm:inline-flex items-center gap-2 text-[13px] font-medium bg-slate-900 text-white px-4 py-2 rounded-full hover:bg-slate-800 transition shadow-sm">
-            Get A Quote
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <a href="blog/index.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 hover:shadow-sm transition">Blog</a>
+          <a href="#contact" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 hover:shadow-sm transition">Contact</a>
+        </nav>
+
+        <!-- Right Action Button -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20am%20interested%20in%20rooftop%20solar%20under%20PM%20Surya%20Ghar." target="_blank" rel="noopener" class="p-2.5 rounded-full text-emerald-600 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 transition" title="Chat on WhatsApp">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.179.182-.077.357.101.173.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
           </a>
-          <!-- Mobile menu button -->
-          <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <a href="#estimate" class="inline-flex items-center gap-2 text-sm font-semibold bg-slate-900 text-white px-5 py-2.5 rounded-full hover:bg-emerald-600 hover:shadow-lg transition-all">
+            <span>Free Site Survey</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <a href="tel:+919019914411" class="p-2 rounded-lg bg-emerald-50 text-emerald-700 hover:bg-emerald-100 transition" aria-label="Call Sri Energy">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/></svg>
+          </a>
+          <button id="menuBtn" type="button" class="p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500" aria-label="Toggle navigation menu">
+            <svg id="menuIconClosed" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <svg id="menuIconOpen" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
           </button>
         </div>
-        <!-- Mobile nav -->
-        <div id="mobileMenu" class="hidden md:hidden px-5 pb-4 space-y-1 border-t border-slate-100">
-          <a href="#home" class="block py-2 text-sm font-medium">Home</a>
-          <a href="#solutions" class="block py-2 text-sm font-medium">Solutions</a>
-          <a href="#services" class="block py-2 text-sm font-medium">Services</a>
-          <a href="#about" class="block py-2 text-sm font-medium">About us</a>
-          <a href="#contact" class="block py-2 text-sm font-medium">Contact</a>
-          <a href="#estimate" class="inline-flex mt-2 items-center gap-2 text-sm font-medium bg-slate-900 text-white px-4 py-2 rounded-full">Get A Quote</a>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 shadow-xl transition-all">
+      <div class="px-5 pt-3 pb-6 space-y-2">
+        <a href="index.html" class="flex items-center justify-between px-3 py-2.5 rounded-xl font-semibold text-slate-900 bg-slate-50">
+          <span>Home</span>
+          <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-bold">Current</span>
+        </a>
+        <a href="solar-panels.html" class="block px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Solar Panels (Mono Perc &amp; TopCon)</a>
+        <a href="solar-inverters.html" class="block px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Solar Inverters (On-Grid &amp; Hybrid)</a>
+        <a href="lithium-battery.html" class="block px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Lithium Batteries (LiFePO4 Storage)</a>
+        <a href="#calculator" class="flex items-center gap-2 px-3 py-2.5 rounded-xl font-medium text-emerald-700 bg-emerald-50/70 hover:bg-emerald-50">
+          <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          <span>Solar Savings Calculator</span>
+        </a>
+        <a href="blog/index.html" class="block px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Solar Blog &amp; Guides</a>
+        <a href="#contact" class="block px-3 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Contact &amp; Location</a>
+        
+        <div class="pt-4 border-t border-slate-100 flex flex-col gap-2.5">
+          <a href="#estimate" class="w-full flex items-center justify-center gap-2 text-center font-semibold bg-emerald-600 text-white py-3 rounded-xl shadow-md hover:bg-emerald-700 transition">
+            <span>Get Free Quote &amp; Site Assessment</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+          <div class="grid grid-cols-2 gap-2 text-xs font-semibold">
+            <a href="tel:+919019914411" class="flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-50">
+              <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/></svg>
+              <span>Call Us</span>
+            </a>
+            <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20would%20like%20a%20free%20solar%20quote" target="_blank" rel="noopener" class="flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-emerald-200 bg-emerald-50 text-emerald-800">
+              <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.179.182-.077.357.101.173.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
         </div>
-      </header>
+      </div>
+    </div>
+  </header>
 
-      <!-- ========== HERO ========== -->
-      <section id="home" class="relative">
-        <div class="relative h-[520px] md:h-[600px] overflow-hidden">
-          <!-- Background image -->
-          <img
-            src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80"
-            alt="Solar panels"
-            class="absolute inset-0 w-full h-full object-cover"
-          />
-          <div class="absolute inset-0 bg-gradient-to-r from-black/55 via-black/30 to-transparent"></div>
+  <!-- ================= HERO SECTION ================= -->
+  <section id="home" class="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+    <!-- Ambient Solar Glow -->
+    <div class="absolute top-0 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-          <!-- Content -->
-          <div class="relative h-full flex flex-col justify-end md:justify-center px-5 md:px-10 pb-16 md:pb-0">
-            <div class="max-w-xl">
-              <h1 class="hero-fade hero-fade-1 text-3xl md:text-5xl font-semibold text-white leading-tight tracking-tight">
-                Rooftop Solar in Mysore &amp; Coorg —<br/>PM Surya Ghar Ready
-              </h1>
-              <p class="hero-fade hero-fade-2 mt-4 text-white/80 text-sm md:text-base max-w-md">
-                Reliable solar panels, hybrid inverters and lithium batteries for homes, farms and businesses. Free site survey and full subsidy support. Call +91 9019914411.
-              </p>
-              <div class="hero-fade hero-fade-3 mt-6 flex flex-wrap gap-3">
-                <a href="#estimate" class="inline-flex items-center gap-2 bg-white text-slate-900 text-sm font-medium px-5 py-2.5 rounded-full hover:bg-slate-100 transition">
-                  Get A Quote
-                </a>
-                <a href="#services" class="inline-flex items-center gap-2 border border-white/40 text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-white/10 transition">
-                  Our Services
-                </a>
-              </div>
+    <!-- Background Hero Imagery -->
+    <div class="absolute inset-0 opacity-25 mix-blend-luminosity">
+      <img
+        src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2000&q=85"
+        alt="Rooftop solar installation Mysore"
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Hero Text Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold backdrop-blur-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            PM Surya Ghar Certified Partner • Mysuru &amp; Coorg
+          </div>
+
+          <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.15]">
+            Power Your Home with Solar. <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300">Slash Electricity Bills by 90%.</span>
+          </h1>
+
+          <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+            Certified residential &amp; commercial rooftop solar installations in <strong>Mysore, Coorg, Mandya &amp; Hassan</strong>. Unlock up to <strong>₹78,000 direct government subsidy</strong>, hassle-free DISCOM net metering, and 25-year panel performance warranty.
+          </p>
+
+          <!-- Badges & USPs -->
+          <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-medium text-slate-300">
+            <div class="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700/60">
+              <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>₹78k PM Surya Ghar Subsidy</span>
+            </div>
+            <div class="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700/60">
+              <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>25-Year Warranty</span>
+            </div>
+            <div class="flex items-center gap-1.5 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700/60">
+              <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Zero-Hassle Approvals</span>
             </div>
           </div>
 
-          <!-- Floating estimate card -->
-          <div id="estimate" class="hero-fade hero-fade-4 absolute right-4 md:right-10 top-1/2 -translate-y-1/2 w-[270px] md:w-[290px] bg-white rounded-[20px] shadow-float p-5 float-card hidden sm:block border border-slate-100/80">
-            <div class="flex items-center gap-2 mb-3">
-              <span class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
-                <svg class="w-3.5 h-3.5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <!-- Hero Action CTAs -->
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
+            <a href="#estimate" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-slate-950 font-bold text-sm px-7 py-3.5 rounded-full shadow-glow transition-all transform hover:-translate-y-0.5">
+              <span>Book Free Site Survey</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <a href="#calculator" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800/90 hover:bg-slate-700 text-white font-semibold text-sm px-6 py-3.5 rounded-full border border-slate-700 transition">
+              <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+              <span>Calculate My Savings</span>
+            </a>
+          </div>
+
+          <!-- Trust stats -->
+          <div class="pt-6 border-t border-slate-800/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+            <div>
+              <p class="font-display font-bold text-2xl lg:text-3xl text-emerald-400">500+</p>
+              <p class="text-xs text-slate-400 mt-0.5">Roofs Solarized</p>
+            </div>
+            <div>
+              <p class="font-display font-bold text-2xl lg:text-3xl text-white">₹2.4 Cr+</p>
+              <p class="text-xs text-slate-400 mt-0.5">Subsidies Claimed</p>
+            </div>
+            <div>
+              <p class="font-display font-bold text-2xl lg:text-3xl text-amber-400">4.9 ★</p>
+              <p class="text-xs text-slate-400 mt-0.5">Google Rating</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Quote Form Card (Always visible on all screens!) -->
+        <div id="estimate" class="lg:col-span-5 scroll-mt-24">
+          <div class="bg-white rounded-3xl shadow-float p-6 sm:p-8 border border-slate-100 text-slate-900 relative">
+            
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-2">
+                <span class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                </span>
+                <div>
+                  <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Free Consultation</span>
+                  <h2 class="font-display font-bold text-lg text-slate-900 leading-tight">Request Free Solar Quote</h2>
+                </div>
+              </div>
+              <span class="text-[11px] font-semibold bg-amber-100 text-amber-900 px-2.5 py-1 rounded-full">
+                No Obligation
               </span>
-              <span class="text-xs font-medium text-slate-500">Free consultation</span>
             </div>
-            <p class="text-sm font-semibold text-slate-900 mb-4 leading-snug">
-              Request a quote at no charge
+
+            <p class="text-xs text-slate-500 mb-5">
+              Fill details below. Our solar engineer will assess your roof &amp; share custom PM Surya Ghar subsidy estimate within 2 hours.
             </p>
-            <form class="space-y-2.5" onsubmit="event.preventDefault(); alert('Thank you! Sri Energy will contact you shortly.');">
-              <input type="text" placeholder="Full name" required class="w-full text-[13px] px-3.5 py-2.5 rounded-xl border border-slate-200/80 focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 bg-slate-50/50" />
-              <input type="email" placeholder="Email address" required class="w-full text-[13px] px-3.5 py-2.5 rounded-xl border border-slate-200/80 focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 bg-slate-50/50" />
-              <input type="tel" placeholder="Phone number" class="w-full text-[13px] px-3.5 py-2.5 rounded-xl border border-slate-200/80 focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 bg-slate-50/50" />
-              <button type="submit" class="w-full bg-slate-900 text-white text-[13px] font-medium py-2.5 rounded-xl hover:bg-slate-800 transition flex items-center justify-center gap-2 mt-1">
-                Get A Quote
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-              </button>
+
+            <form id="heroQuoteForm" class="space-y-3.5" onsubmit="handleQuoteSubmit(event)">
+              <div>
+                <label for="fullName" class="block text-xs font-semibold text-slate-700 mb-1">Your Full Name *</label>
+                <input 
+                  type="text" 
+                  id="fullName" 
+                  name="name" 
+                  placeholder="e.g. Ramesh Gowda" 
+                  required 
+                  class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition"
+                />
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label for="phoneNumber" class="block text-xs font-semibold text-slate-700 mb-1">Phone Number *</label>
+                  <input 
+                    type="tel" 
+                    id="phoneNumber" 
+                    name="phone" 
+                    placeholder="+91 9019914411" 
+                    required 
+                    pattern="[0-9+ -]{10,14}" 
+                    class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition"
+                  />
+                </div>
+                <div>
+                  <label for="citySelect" class="block text-xs font-semibold text-slate-700 mb-1">City / Region *</label>
+                  <select 
+                    id="citySelect" 
+                    name="city" 
+                    class="w-full text-sm px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition"
+                  >
+                    <option value="Mysuru">Mysuru (Mysore)</option>
+                    <option value="Kodagu/Coorg">Kodagu (Coorg)</option>
+                    <option value="Mandya">Mandya</option>
+                    <option value="Hassan">Hassan</option>
+                    <option value="Chamarajanagar">Chamarajanagar</option>
+                    <option value="Bengaluru">Bengaluru</option>
+                    <option value="Other">Other Karnataka Region</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="billSelect" class="block text-xs font-semibold text-slate-700 mb-1">Average Monthly Electricity Bill</label>
+                <select 
+                  id="billSelect" 
+                  name="bill" 
+                  class="w-full text-sm px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition"
+                >
+                  <option value="₹1,500 - ₹3,000">₹1,500 – ₹3,000 / month (1–2 kW)</option>
+                  <option value="₹3,000 - ₹5,000" selected>₹3,000 – ₹5,000 / month (3 kW Recommended)</option>
+                  <option value="₹5,000 - ₹8,000">₹5,000 – ₹8,000 / month (4–5 kW)</option>
+                  <option value="₹8,000 - ₹15,000">₹8,000 – ₹15,000 / month (6–10 kW)</option>
+                  <option value="₹15,000+">₹15,000+ / Commercial or Industrial</option>
+                </select>
+              </div>
+
+              <div class="pt-2">
+                <button 
+                  type="submit" 
+                  class="w-full bg-slate-900 hover:bg-emerald-600 text-white font-bold text-sm py-3 px-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 group"
+                >
+                  <span>Get My Free Solar Quote</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </button>
+              </div>
+
+              <p class="text-[11px] text-center text-slate-400 mt-2">
+                🔒 Privacy guaranteed. No spam. You will also receive an option to connect instantly on WhatsApp.
+              </p>
             </form>
+
+            <div id="quoteSuccess" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-center">
+              <p class="text-sm font-bold text-emerald-800">✅ Thank you! Quote request received.</p>
+              <p class="text-xs text-emerald-700 mt-1">Our engineer will contact you shortly. Need faster reply?</p>
+              <a id="waDirectLink" href="#" target="_blank" class="inline-flex items-center gap-1.5 mt-2 text-xs font-bold text-emerald-800 underline">
+                Continue on WhatsApp with details →
+              </a>
+            </div>
+
           </div>
         </div>
 
-        <!-- Marquee -->
-        <div class="bg-white border-t border-slate-100 py-3 overflow-hidden">
-          <div class="marquee">
-            <div class="marquee-track text-sm font-medium text-slate-500">
-              <span class="mx-6">/ Power Your Future</span>
-              <span class="mx-6">/ PM Surya Ghar</span>
-              <span class="mx-6">/ Sri Energy</span>
-              <span class="mx-6">/ Rooftop Solar</span>
-              <span class="mx-6">/ Save with Solar</span>
-              <span class="mx-6">/ Mysore & Coorg</span>
-              <span class="mx-6">/ Power Your Future</span>
-              <span class="mx-6">/ PM Surya Ghar</span>
-              <span class="mx-6">/ Sri Energy</span>
-              <span class="mx-6">/ Rooftop Solar</span>
-              <span class="mx-6">/ Save with Solar</span>
-              <span class="mx-6">/ Mysore & Coorg</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTINUOUS TRUST MARQUEE ================= -->
+  <div class="bg-white border-y border-slate-200/80 py-3.5 overflow-hidden">
+    <div class="marquee-wrapper">
+      <div class="marquee-track text-xs sm:text-sm font-semibold text-slate-600 uppercase tracking-wider">
+        <span class="mx-6 flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> PM Surya Ghar Muft Bijli Yojana</span>
+        <span class="mx-6 flex items-center gap-2"><span class="text-amber-500 font-bold">★</span> Up to ₹78,000 Direct Subsidy</span>
+        <span class="mx-6 flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> 25-Year Performance Warranty</span>
+        <span class="mx-6 flex items-center gap-2"><span class="text-slate-900 font-bold">•</span> Sri Energy Mysuru</span>
+        <span class="mx-6 flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Net-Metering with CHESCOM &amp; BESCOM</span>
+        <span class="mx-6 flex items-center gap-2"><span class="text-amber-500 font-bold">★</span> Mono Perc &amp; TopCon Tier-1 Panels</span>
+        <span class="mx-6 flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Agricultural Solar Pumpsets in Coorg</span>
+        <span class="mx-6 flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> PM Surya Ghar Muft Bijli Yojana</span>
+        <span class="mx-6 flex items-center gap-2"><span class="text-amber-500 font-bold">★</span> Up to ₹78,000 Direct Subsidy</span>
+        <span class="mx-6 flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> 25-Year Performance Warranty</span>
+        <span class="mx-6 flex items-center gap-2"><span class="text-slate-900 font-bold">•</span> Sri Energy Mysuru</span>
+        <span class="mx-6 flex items-center gap-2"><span class="text-emerald-500 font-bold">✓</span> Net-Metering with CHESCOM &amp; BESCOM</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= INTERACTIVE SOLAR SAVINGS CALCULATOR ================= -->
+  <section id="calculator" class="py-16 sm:py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200/80 scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-600 bg-emerald-50 border border-emerald-200/80 px-3 py-1 rounded-full">
+          Instant Financial Assessment
+        </span>
+        <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-slate-900 mt-3 tracking-tight">
+          Estimate Your Solar Plant Size &amp; Government Subsidy
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3">
+          Select your average monthly electricity bill to calculate the ideal rooftop system capacity, direct PM Surya Ghar subsidy, and 25-year lifetime savings.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-white rounded-3xl p-6 sm:p-10 shadow-card border border-slate-200/70">
+        
+        <!-- Bill Selector UI -->
+        <div class="mb-10">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+            <label for="billRange" class="font-display font-bold text-slate-800 text-base">Your Monthly Electricity Bill:</label>
+            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-600 font-display" id="billDisplay">
+              ₹3,500 <span class="text-xs font-normal text-slate-500">/ month</span>
             </div>
+          </div>
+          
+          <input 
+            type="range" 
+            id="billRange" 
+            min="1000" 
+            max="15000" 
+            step="500" 
+            value="3500" 
+            class="w-full h-2.5 bg-slate-200 rounded-lg cursor-pointer"
+            oninput="updateCalculator(this.value)"
+          />
+
+          <!-- Quick click chips -->
+          <div class="flex flex-wrap items-center gap-2 mt-4 text-xs">
+            <span class="text-slate-400 font-medium">Quick Select:</span>
+            <button type="button" onclick="setBillValue(1500)" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold transition">₹1,500</button>
+            <button type="button" onclick="setBillValue(3000)" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold transition">₹3,000</button>
+            <button type="button" onclick="setBillValue(5000)" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold transition">₹5,000</button>
+            <button type="button" onclick="setBillValue(8000)" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold transition">₹8,000</button>
+            <button type="button" onclick="setBillValue(12000)" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold transition">₹12,000</button>
           </div>
         </div>
-      </section>
 
-      <!-- ========== INTRO + ICONS ========== -->
-      <section class="px-5 md:px-10 py-16 md:py-20">
-        <div class="max-w-2xl mx-auto text-center reveal">
-          <p class="text-xs font-medium tracking-widest text-slate-400 uppercase mb-3">Why choose Sri Energy</p>
-          <h2 class="text-2xl md:text-3xl font-semibold text-slate-900 leading-snug">
-            Powering a Sustainable Future with Sri Energy. ISO 9001:2015 certified solutions for homes, businesses & agriculture in Mysore & Coorg.
-          </h2>
+        <!-- Calculated Results Cards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          
+          <div class="p-4 sm:p-5 rounded-2xl bg-emerald-50/70 border border-emerald-100">
+            <p class="text-xs font-semibold text-emerald-800 uppercase tracking-wider">Plant Capacity</p>
+            <p class="font-display font-extrabold text-2xl sm:text-3xl text-emerald-700 mt-1" id="calcKW">3 kW</p>
+            <p class="text-[11px] text-emerald-600 mt-1" id="calcUnits">~360 units/month</p>
+          </div>
+
+          <div class="p-4 sm:p-5 rounded-2xl bg-amber-50/70 border border-amber-200/60">
+            <p class="text-xs font-semibold text-amber-800 uppercase tracking-wider">Govt Subsidy</p>
+            <p class="font-display font-extrabold text-2xl sm:text-3xl text-amber-700 mt-1" id="calcSubsidy">₹78,000</p>
+            <p class="text-[11px] text-amber-800/80 mt-1">PM Surya Ghar eligible</p>
+          </div>
+
+          <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
+            <p class="text-xs font-semibold text-slate-600 uppercase tracking-wider">Monthly Savings</p>
+            <p class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 mt-1" id="calcMonthlySave">₹3,150</p>
+            <p class="text-[11px] text-slate-500 mt-1">90% bill cut</p>
+          </div>
+
+          <div class="p-4 sm:p-5 rounded-2xl bg-slate-900 text-white">
+            <p class="text-xs font-semibold text-emerald-400 uppercase tracking-wider">25-Yr Savings</p>
+            <p class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-1" id="calcLifetimeSave">₹9.4 Lakhs</p>
+            <p class="text-[11px] text-slate-400 mt-1" id="calcPayback">ROI in ~3.8 years</p>
+          </div>
+
         </div>
 
-        <div class="mt-12 grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-4">
-          <div class="reveal reveal-delay-1 text-center">
-            <div class="w-12 h-12 mx-auto rounded-full bg-slate-100 flex items-center justify-center mb-3">
-              <svg class="w-5 h-5 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-            </div>
-            <p class="text-sm font-medium text-slate-800">Solar Panels</p>
-            <p class="text-xs text-slate-500 mt-1">High-efficiency PV modules</p>
-          </div>
-          <div class="reveal reveal-delay-2 text-center">
-            <div class="w-12 h-12 mx-auto rounded-full bg-slate-100 flex items-center justify-center mb-3">
-              <svg class="w-5 h-5 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
-            </div>
-            <p class="text-sm font-medium text-slate-800">Lithium Batteries</p>
-            <p class="text-xs text-slate-500 mt-1">Reliable energy storage</p>
-          </div>
-          <div class="reveal reveal-delay-3 text-center">
-            <div class="w-12 h-12 mx-auto rounded-full bg-green-100 flex items-center justify-center mb-3">
-              <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </div>
-            <p class="text-sm font-medium text-slate-800">Solar Inverters</p>
-            <p class="text-xs text-slate-500 mt-1">DC to AC conversion</p>
-          </div>
-          <div class="reveal reveal-delay-4 text-center">
-            <div class="w-12 h-12 mx-auto rounded-full bg-slate-100 flex items-center justify-center mb-3">
-              <svg class="w-5 h-5 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            </div>
-            <p class="text-sm font-medium text-slate-800">24×7 Remote Support</p>
-            <p class="text-xs text-slate-500 mt-1">Always available</p>
-          </div>
-          <div class="reveal text-center col-span-2 md:col-span-1">
-            <div class="w-12 h-12 mx-auto rounded-full bg-slate-100 flex items-center justify-center mb-3">
-              <svg class="w-5 h-5 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
-            </div>
-            <p class="text-sm font-medium text-slate-800">ISO 9001:2015</p>
-            <p class="text-xs text-slate-500 mt-1">Certified quality</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========== IMPACT / STATS ========== -->
-      <section id="solutions" class="px-5 md:px-10 pb-16 md:pb-20">
-        <div class="bg-slate-50/80 rounded-[24px] p-6 md:p-10 border border-slate-100/60">
-          <div class="grid md:grid-cols-12 gap-8 items-center">
-            <!-- Left stats -->
-            <div class="md:col-span-3 space-y-6 reveal">
-              <div>
-                <p class="text-4xl md:text-5xl font-semibold text-slate-900 tracking-tight" id="statPercent">87%</p>
-                <p class="text-sm text-slate-500 mt-1">Average energy bill reduction for our customers</p>
-              </div>
-              <div>
-                <p class="text-4xl md:text-5xl font-semibold text-slate-900 tracking-tight">14x</p>
-                <p class="text-sm text-slate-500 mt-1">Faster installation than traditional methods</p>
-              </div>
-              <div class="flex gap-3">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=120&q=80" class="w-14 h-14 rounded-xl object-cover" alt="Rooftop solar installation Mysore" />
-                <div class="w-14 h-14 rounded-xl bg-slate-900 flex items-center justify-center">
-                  <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1.323l3.954 1.582a1 1 0 01.646.928V10a1 1 0 01-1 1H5a1 1 0 01-1-1V6.833a1 1 0 01.646-.928L8.6 4.323V3a1 1 0 011-1z"/></svg>
-                </div>
-              </div>
-            </div>
-
-            <!-- Center image card -->
-            <div class="md:col-span-5 reveal reveal-delay-1">
-              <div class="relative rounded-[20px] overflow-hidden shadow-card">
-                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=700&q=80" class="w-full h-64 md:h-72 object-cover img-hover" alt="Solar professional" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                <div class="absolute bottom-0 left-0 right-0 p-5">
-                  <h3 class="text-white text-lg font-semibold leading-snug">Expert solar energy systems for homes & businesses</h3>
-                  <a href="#services" class="inline-flex items-center gap-1.5 text-white/90 text-sm mt-2 hover:text-white">
-                    Learn more
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right savings card -->
-            <div class="md:col-span-4 reveal reveal-delay-2">
-              <div class="bg-amber-300 rounded-[20px] p-6 shadow-card">
-                <p class="text-xs font-medium text-amber-900/70 mb-1">Estimated annual savings</p>
-                <p class="text-3xl font-semibold text-amber-950 tracking-tight">₹1.2 Lakh+</p>
-                <p class="text-xs text-amber-900/70 mt-1">Typical annual savings + PM Surya Ghar subsidy</p>
-                <div class="mt-5 flex items-center gap-3">
-                  <span class="text-xs font-medium text-amber-900">Payback</span>
-                  <div class="flex-1 h-1.5 bg-amber-400/50 rounded-full overflow-hidden">
-                    <div class="h-full bg-amber-900 rounded-full" style="width: 68%"></div>
-                  </div>
-                  <span class="text-xs font-medium text-amber-900">6.8 yrs</span>
-                </div>
-              </div>
-
-              <div class="mt-4 bg-white rounded-[18px] p-5 shadow-card border border-slate-100/80">
-                <p class="text-xs font-medium text-slate-500 mb-3">Typical monthly costs</p>
-                <div class="flex items-center justify-between mb-3">
-                  <div class="flex items-center gap-2">
-                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=60&q=80" class="w-8 h-8 rounded-lg object-cover" alt="Solar technician Mysore" />
-                    <span class="text-sm font-medium">Before Solar</span>
-                  </div>
-                  <span class="text-sm font-semibold">₹6,650</span>
-                </div>
-                <div class="flex items-center justify-between">
-                  <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center">
-                      <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1.323l3.954 1.582a1 1 0 01.646.928V10a1 1 0 01-1 1H5a1 1 0 01-1-1V6.833a1 1 0 01.646-.928L8.6 4.323V3a1 1 0 011-1z"/></svg>
-                    </div>
-                    <span class="text-sm font-medium">With Sri Energy</span>
-                  </div>
-                  <span class="text-sm font-semibold text-green-600">₹1,150</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========== PROCESS ========== -->
-      <section id="services" class="px-5 md:px-10 pb-16 md:pb-20">
-        <div class="text-center max-w-2xl mx-auto mb-12 reveal">
-          <p class="text-xs font-medium tracking-widest text-slate-400 uppercase mb-3">How we work</p>
-          <h2 class="text-2xl md:text-3xl font-semibold text-slate-900 leading-snug">
-            From site evaluation to design, installation and after-sales support, Sri Energy handles every step. Continuous remote service support keeps your system performing at its best.
-          </h2>
-        </div>
-
-        <!-- Decorative images -->
-        <div class="flex justify-center gap-4 mb-10 reveal">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=120&q=80" class="w-16 h-16 rounded-2xl object-cover shadow-card" alt="Solar panels on rooftop" />
-          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=120&q=80" class="w-16 h-16 rounded-2xl object-cover shadow-card -mt-3" alt="Residential solar array" />
-          <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=120&q=80" class="w-16 h-16 rounded-2xl object-cover shadow-card" alt="Solar installation team" />
-          <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=120&q=80" class="w-16 h-16 rounded-2xl object-cover shadow-card -mt-3" alt="Clean energy solar farm" />
-        </div>
-
-        <!-- Steps -->
-        <div class="grid md:grid-cols-3 gap-4" id="processSteps">
-          <div class="process-step active rounded-[18px] p-6 cursor-pointer border border-transparent" data-step="0">
-            <span class="text-xs font-medium text-slate-400">01</span>
-            <h3 class="text-lg font-semibold mt-2">Design and Engineering</h3>
-            <p class="text-sm text-slate-500 mt-2 leading-relaxed">
-              Our experts create a custom solar system design tailored to your roof, energy needs, and local regulations.
+        <!-- Detailed Breakdown & Action -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/70 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center sm:text-left">
+            <p class="text-xs text-slate-500">
+              Roof space needed: <strong class="text-slate-900" id="calcRoof">~300 sq. ft. shadow-free area</strong>
+            </p>
+            <p class="text-xs text-slate-500">
+              Net metering: <span class="text-emerald-700 font-semibold">Eligible for grid export credits under CHESCOM/BESCOM</span>
             </p>
           </div>
-          <div class="process-step rounded-[18px] p-6 cursor-pointer bg-slate-50 border border-slate-100" data-step="1">
-            <span class="text-xs font-medium text-slate-400">02</span>
-            <h3 class="text-lg font-semibold mt-2">Permits and Approval</h3>
-            <p class="text-sm text-slate-500 mt-2 leading-relaxed">
-              We manage all paperwork, permits, and utility approvals so you never have to worry about the bureaucracy.
-            </p>
-          </div>
-          <div class="process-step rounded-[18px] p-6 cursor-pointer bg-slate-50 border border-slate-100" data-step="2">
-            <span class="text-xs font-medium text-slate-400">03</span>
-            <h3 class="text-lg font-semibold mt-2">Installation and Monitoring</h3>
-            <p class="text-sm text-slate-500 mt-2 leading-relaxed">
-              Certified installers complete the work quickly, then we monitor performance for the life of your system.
-            </p>
-          </div>
+          <button 
+            type="button" 
+            onclick="applyCalculatorToQuote()" 
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-5 py-2.5 rounded-full transition shadow-sm"
+          >
+            <span>Lock In This Subsidy</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
         </div>
-      </section>
 
-      <!-- ========== BENEFITS ========== -->
-      <section class="px-5 md:px-10 pb-16 md:pb-20">
-        <div class="max-w-xl mb-10 reveal">
-          <p class="text-xs font-medium tracking-widest text-slate-400 uppercase mb-3">Why go solar</p>
-          <h2 class="text-2xl md:text-3xl font-semibold text-slate-900 leading-snug">
-            Budget-friendly & space-saving solar solutions. Non-polluting, easy installation, low maintenance and fully renewable.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CORE PRODUCTS & SOLUTIONS ================= -->
+  <section id="solutions" class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-600 bg-emerald-50 border border-emerald-200/80 px-3 py-1 rounded-full">
+            Engineering Excellence
+          </span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-slate-900 mt-3 tracking-tight">
+            Complete Solar Solutions for Karnataka
           </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-2xl">
+            Tailored engineering for residences, plantations in Kodagu, manufacturing plants, and agricultural estates.
+          </p>
+        </div>
+        <div class="flex gap-2">
+          <a href="solar-panels.html" class="text-xs font-bold text-emerald-600 hover:text-emerald-700 hover:underline flex items-center gap-1">
+            Browse All Hardware &rarr;
+          </a>
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Solution 1: On-Grid -->
+        <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/70 hover:shadow-card-hover hover:border-emerald-300 transition-all flex flex-col">
+          <div class="h-44 overflow-hidden relative">
+            <img 
+              src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80" 
+              alt="On-grid solar rooftop Mysore" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <span class="absolute top-3 left-3 bg-slate-900/85 backdrop-blur-sm text-emerald-400 text-[11px] font-bold px-2.5 py-1 rounded-full">
+              Most Popular
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-display font-bold text-lg text-slate-900 group-hover:text-emerald-600 transition-colors">
+                On-Grid Rooftop Solar
+              </h3>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Direct connection to electricity grid with bidirectional net-metering. Export excess daytime power to DISCOM and reduce your bill to zero.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs font-semibold">
+              <span class="text-emerald-600">PM Surya Ghar Subsidy</span>
+              <a href="blog/on-grid-vs-off-grid-vs-hybrid.html" class="text-slate-700 hover:text-emerald-600">Guide &rarr;</a>
+            </div>
+          </div>
         </div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div class="reveal reveal-delay-1 bg-white rounded-[20px] overflow-hidden shadow-card border border-slate-100/80 group">
-            <div class="h-40 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover img-hover" alt="On-Grid Solar Rooftop" />
-            </div>
-            <div class="p-5">
-              <h3 class="font-semibold text-slate-900">On-Grid Solar</h3>
-              <p class="text-sm text-slate-500 mt-1.5 leading-relaxed">Connect to the grid, earn credits with net metering, and enjoy continuous power without batteries.</p>
-            </div>
+        <!-- Solution 2: Hybrid Solar -->
+        <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/70 hover:shadow-card-hover hover:border-emerald-300 transition-all flex flex-col">
+          <div class="h-44 overflow-hidden relative">
+            <img 
+              src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=800&q=80" 
+              alt="Hybrid solar with battery storage" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full">
+              24/7 Backup
+            </span>
           </div>
-          <div class="reveal reveal-delay-2 bg-white rounded-[20px] overflow-hidden shadow-card border border-slate-100/80 group">
-            <div class="h-40 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover img-hover" alt="Off-Grid Battery Storage" />
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-display font-bold text-lg text-slate-900 group-hover:text-emerald-600 transition-colors">
+                Hybrid Solar + Storage
+              </h3>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Best of both worlds: grid export savings + lithium battery emergency backup during power outages. Ideal for estates &amp; remote residences.
+              </p>
             </div>
-            <div class="p-5">
-              <h3 class="font-semibold text-slate-900">Off-Grid Solar</h3>
-              <p class="text-sm text-slate-500 mt-1.5 leading-relaxed">Complete energy independence with battery storage — ideal for remote locations and full autonomy.</p>
-            </div>
-          </div>
-          <div class="reveal reveal-delay-3 bg-white rounded-[20px] overflow-hidden shadow-card border border-slate-100/80 group">
-            <div class="h-40 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover img-hover" alt="Hybrid Solar System" />
-            </div>
-            <div class="p-5">
-              <h3 class="font-semibold text-slate-900">Hybrid Solar</h3>
-              <p class="text-sm text-slate-500 mt-1.5 leading-relaxed">Best of both worlds — grid connection plus battery backup for uninterrupted power during outages.</p>
-            </div>
-          </div>
-          <div class="reveal reveal-delay-4 bg-white rounded-[20px] overflow-hidden shadow-card border border-slate-100/80 group">
-            <div class="h-40 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover img-hover" alt="Solar Pumpset Agriculture" />
-            </div>
-            <div class="p-5">
-              <h3 class="font-semibold text-slate-900">Solar Pumpset</h3>
-              <p class="text-sm text-slate-500 mt-1.5 leading-relaxed">Power irrigation and farm operations with reliable, eco-friendly solar pump solutions for agriculture.</p>
+            <div class="mt-4 pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs font-semibold">
+              <span class="text-slate-600">4ms UPS Switching</span>
+              <a href="solar-inverters.html" class="text-slate-700 hover:text-emerald-600">Inverters &rarr;</a>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- ========== AREAS WE SERVE ========== -->
-      <section class="px-5 md:px-10 pb-16 md:pb-20">
-        <div class="bg-slate-50/80 rounded-[24px] p-8 md:p-12 relative overflow-hidden border border-slate-100/60">
-          <div class="text-center mb-10">
-            <p class="text-xs font-medium tracking-widest text-slate-400 uppercase mb-3">Areas we serve</p>
-            <h2 class="text-2xl md:text-3xl font-semibold text-slate-900 max-w-2xl mx-auto leading-snug reveal">
-              Serving residences, schools, hospitals, industries & agriculture across Mysore & Coorg
+        <!-- Solution 3: Lithium Battery Storage -->
+        <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/70 hover:shadow-card-hover hover:border-emerald-300 transition-all flex flex-col">
+          <div class="h-44 overflow-hidden relative">
+            <img 
+              src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" 
+              alt="Lithium battery energy storage Mysore" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <span class="absolute top-3 left-3 bg-amber-500 text-slate-950 text-[11px] font-bold px-2.5 py-1 rounded-full">
+              LiFePO4 Chemistry
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-display font-bold text-lg text-slate-900 group-hover:text-emerald-600 transition-colors">
+                Lithium Batteries
+              </h3>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Long-life wall &amp; floor mounted LiFePO4 batteries with smart Bluetooth BMS. Scalable from 5 kWh to 81+ kWh with zero maintenance.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs font-semibold">
+              <span class="text-emerald-600">6000+ Cycles</span>
+              <a href="lithium-battery.html" class="text-slate-700 hover:text-emerald-600">Batteries &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Solution 4: Agricultural Solar Pumpsets -->
+        <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/70 hover:shadow-card-hover hover:border-emerald-300 transition-all flex flex-col">
+          <div class="h-44 overflow-hidden relative">
+            <img 
+              src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=80" 
+              alt="Agricultural solar pumpset Coorg" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <span class="absolute top-3 left-3 bg-blue-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full">
+              Farmers &amp; Coorg
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-display font-bold text-lg text-slate-900 group-hover:text-emerald-600 transition-colors">
+                Solar Pumpsets for Agriculture
+              </h3>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Reliable solar water pumping for coffee estates, plantations, and farms in Kodagu &amp; Mysore. Eliminate diesel costs and grid unreliability.
+              </p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs font-semibold">
+              <span class="text-blue-600">PM-KUSUM Eligible</span>
+              <a href="blog/solar-pumpset-farmers-coorg.html" class="text-slate-700 hover:text-emerald-600">Pumpsets &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= WHY CHOOSE SRI ENERGY ================= -->
+  <section class="py-16 sm:py-24 bg-slate-900 text-white relative overflow-hidden">
+    <!-- Background grid decoration -->
+    <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px] opacity-40"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-full">
+          Trusted Local Partner
+        </span>
+        <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white mt-3 tracking-tight">
+          Why Homeowners &amp; Businesses in Mysore Choose Sri Energy
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-3">
+          We don’t just install panels — we take end-to-end responsibility from roof structural design and DISCOM approvals to lifetime maintenance.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-slate-800/80 border border-slate-700/80 hover:border-emerald-500/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">100% Subsidy Handling</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            We submit the PM Surya Ghar national portal applications, coordinate DISCOM inspections, and ensure your subsidy is directly credited to your account.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-800/80 border border-slate-700/80 hover:border-emerald-500/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">Tier-1 Monocrystalline</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            High-efficiency Mono Perc and TopCon bifacial solar panels (up to 610W) that generate high wattage even during cloudy Karnataka monsoon days.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-800/80 border border-slate-700/80 hover:border-emerald-500/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">14x Faster Turnaround</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Pre-engineered aluminum mounting structures, skilled in-house installation crew, and immediate quality commissioning with safe earthing and surge protection.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-800/80 border border-slate-700/80 hover:border-emerald-500/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white mb-2">Local Service &amp; Support</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Physical presence in Vijayanagar, Mysuru. When you call, a real local engineer answers — not an automated call center in another state.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 4-STEP INSTALLATION PROCESS ================= -->
+  <section id="process" class="py-16 sm:py-24 bg-white border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-600 bg-emerald-50 border border-emerald-200/80 px-3 py-1 rounded-full">
+          Simple 4-Step Process
+        </span>
+        <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-slate-900 mt-3 tracking-tight">
+          How Sri Energy Solarizes Your Roof
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3">
+          We make going solar effortless. You sit back while our certified solar engineers manage every step.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 relative">
+          <span class="font-display font-extrabold text-4xl text-slate-200 absolute top-4 right-4">01</span>
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold mb-4">
+            1
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Free Site &amp; Roof Survey</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            Our solar engineer visits your property in Mysore or Coorg, checks shadow angles, roof structural strength, and analyzes past electricity bills.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 relative">
+          <span class="font-display font-extrabold text-4xl text-slate-200 absolute top-4 right-4">02</span>
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold mb-4">
+            2
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Design &amp; PM Portal Filing</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            We provide a 3D structural layout, optimal kW sizing, and handle the PM Surya Ghar registration and DISCOM net-metering feasibility application.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 relative">
+          <span class="font-display font-extrabold text-4xl text-slate-200 absolute top-4 right-4">03</span>
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold mb-4">
+            3
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Certified Installation</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            Installation completed in 2-3 days using corrosion-proof hot-dip galvanized mounting structures, Tier-1 panels, and dedicated earthing pits.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 relative">
+          <span class="font-display font-extrabold text-4xl text-slate-200 absolute top-4 right-4">04</span>
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold mb-4">
+            4
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Inspection &amp; Subsidy Credit</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            DISCOM inspects and installs the bidirectional bi-directional net meter. Your government subsidy is released directly to your bank account.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= REGIONS WE SERVE ================= -->
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-5 space-y-4">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-600 bg-emerald-50 border border-emerald-200/80 px-3 py-1 rounded-full">
+            Local Presence
+          </span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-slate-900 tracking-tight">
+            Serving South Karnataka with Dedicated Field Teams
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            With headquarters in <strong>Vijaynagar, Mysuru</strong>, we serve homes, coffee plantations, educational institutions, and healthcare centers across Southern Karnataka.
+          </p>
+
+          <div class="grid grid-cols-2 gap-3 pt-2 text-xs font-semibold text-slate-700">
+            <div class="flex items-center gap-2 p-3 rounded-xl bg-white border border-slate-200/80 shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span>Mysuru (City &amp; Rural)</span>
+            </div>
+            <div class="flex items-center gap-2 p-3 rounded-xl bg-white border border-slate-200/80 shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span>Kodagu / Coorg</span>
+            </div>
+            <div class="flex items-center gap-2 p-3 rounded-xl bg-white border border-slate-200/80 shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span>Mandya &amp; Maddur</span>
+            </div>
+            <div class="flex items-center gap-2 p-3 rounded-xl bg-white border border-slate-200/80 shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span>Hassan &amp; Sakleshpur</span>
+            </div>
+            <div class="flex items-center gap-2 p-3 rounded-xl bg-white border border-slate-200/80 shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span>Chamarajanagar</span>
+            </div>
+            <div class="flex items-center gap-2 p-3 rounded-xl bg-white border border-slate-200/80 shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span>Bengaluru Rural</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="relative rounded-3xl overflow-hidden shadow-card border border-slate-200">
+            <img 
+              src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=85" 
+              alt="Mysuru Palace and Karnataka region solar service" 
+              class="w-full h-72 sm:h-96 object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6 text-white">
+              <p class="text-xs font-semibold text-emerald-400 uppercase tracking-wider">Fast Local Response</p>
+              <h3 class="font-display font-bold text-xl sm:text-2xl mt-1">Site surveys scheduled within 24 hours</h3>
+              <p class="text-xs text-slate-300 mt-1">Call our Vijaynagar engineering office at +91 9019914411</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section class="py-16 sm:py-24 bg-white border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-600 bg-emerald-50 border border-emerald-200/80 px-3 py-1 rounded-full">
+          Customer Satisfaction
+        </span>
+        <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-slate-900 mt-3 tracking-tight">
+          What Customers in Mysore &amp; Coorg Say
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3">
+          Real feedback from local homeowners, estate planters, and business managers who switched to Sri Energy.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/70 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+            <p class="text-xs text-slate-600 leading-relaxed italic">
+              "Sri Energy made our switch to solar completely seamless. The 3 kW PM Surya Ghar system cut our electricity bill from ₹4,500 down to ₹200. Best solar team in Mysuru!"
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-200 flex items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Suresh Reddy Mysore" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <p class="font-display font-bold text-sm text-slate-900">Suresh Reddy</p>
+              <p class="text-[11px] text-slate-400">Homeowner, Vijayanagar Mysuru</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-emerald-50/50 rounded-2xl p-6 border border-emerald-200/70 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+            <p class="text-xs text-slate-700 leading-relaxed italic">
+              "Our solar pumpset in Kodagu has completely transformed our irrigation. Zero electricity dependence and reliable watering even during grid power trips."
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-emerald-200/60 flex items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Ramesh Gowda Coorg" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <p class="font-display font-bold text-sm text-slate-900">Ramesh Gowda</p>
+              <p class="text-[11px] text-emerald-700">Coffee Planter, Kodagu (Coorg)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/70 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+            <p class="text-xs text-slate-600 leading-relaxed italic">
+              "We installed a 10 kW hybrid system with LiFePO4 battery for our clinic. The 4ms UPS switching is unnoticeable. Clean, silent, zero diesel fumes."
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-200 flex items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Dr. Meera Sharma" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <p class="font-display font-bold text-sm text-slate-900">Dr. Meera Sharma</p>
+              <p class="text-[11px] text-slate-400">Clinic Director, Mysuru</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/70 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+            <p class="text-xs text-slate-600 leading-relaxed italic">
+              "Sri Energy managed the entire CHESCOM paperwork and subsidy filing on the national portal. Received our ₹78,000 subsidy directly without any middlemen."
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-200 flex items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80" alt="Vikram Singh Mandya" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <p class="font-display font-bold text-sm text-slate-900">Vikram Singh</p>
+              <p class="text-[11px] text-slate-400">Commercial Facility, Mandya</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FREQUENTLY ASKED QUESTIONS (FAQ) ================= -->
+  <section id="faq" class="py-16 sm:py-24 bg-slate-50 border-b border-slate-200/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-600 bg-emerald-50 border border-emerald-200/80 px-3 py-1 rounded-full">
+          Got Questions?
+        </span>
+        <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-slate-900 mt-3 tracking-tight">
+          Rooftop Solar &amp; PM Surya Ghar FAQs
+        </h2>
+        <p class="text-slate-600 text-sm mt-2">
+          Clear answers regarding cost, subsidies, net metering, and installation in Karnataka.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <details class="group bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-sm open:border-emerald-300 transition">
+          <summary class="font-display font-bold text-slate-900 text-base cursor-pointer list-none flex justify-between items-center select-none">
+            <span>Is Sri Energy an authorized partner for the PM Surya Ghar subsidy?</span>
+            <span class="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 group-open:rotate-180 group-open:bg-emerald-100 group-open:text-emerald-700 transition">
+              ▾
+            </span>
+          </summary>
+          <div class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Yes. Sri Energy designs and installs rooftop solar systems that comply strictly with Ministry of New and Renewable Energy (MNRE) guidelines and qualify for the PM Surya Ghar Muft Bijli Yojana in Karnataka. We handle DISCOM approvals (CHESCOM / BESCOM) and help you claim up to ₹78,000 directly.
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-sm open:border-emerald-300 transition">
+          <summary class="font-display font-bold text-slate-900 text-base cursor-pointer list-none flex justify-between items-center select-none">
+            <span>How much does a rooftop solar plant cost in Mysore?</span>
+            <span class="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 group-open:rotate-180 group-open:bg-emerald-100 group-open:text-emerald-700 transition">
+              ▾
+            </span>
+          </summary>
+          <div class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Residential solar systems in Mysore typically cost ₹45,000 to ₹65,000 per kW before subsidy. For a standard 3 kW system (approx. ₹1.85 Lakhs total), after the ₹78,000 PM Surya Ghar central subsidy, your net out-of-pocket investment is only around ₹1.05 to ₹1.15 Lakhs, which pays for itself in under 3.5 to 4 years.
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-sm open:border-emerald-300 transition">
+          <summary class="font-display font-bold text-slate-900 text-base cursor-pointer list-none flex justify-between items-center select-none">
+            <span>Do you install solar in Coorg and rural agricultural areas?</span>
+            <span class="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 group-open:rotate-180 group-open:bg-emerald-100 group-open:text-emerald-700 transition">
+              ▾
+            </span>
+          </summary>
+          <div class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Yes! We have dedicated teams serving Kodagu (Coorg), Mandya, Hassan, and Chamarajanagar. We specialize in hybrid solar systems with lithium batteries for estates experiencing frequent power cuts and solar pumpsets for coffee plantations and agricultural farms.
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-sm open:border-emerald-300 transition">
+          <summary class="font-display font-bold text-slate-900 text-base cursor-pointer list-none flex justify-between items-center select-none">
+            <span>On-grid, off-grid or hybrid — which system should I choose?</span>
+            <span class="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 group-open:rotate-180 group-open:bg-emerald-100 group-open:text-emerald-700 transition">
+              ▾
+            </span>
+          </summary>
+          <div class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            • <strong>On-Grid</strong> is the most economical if your area has stable power and you want maximum electricity bill reduction with net metering.<br>
+            • <strong>Hybrid</strong> is ideal if you experience frequent power cuts and require battery backup for lights, fans, fridge, and WiFi.<br>
+            • <strong>Off-Grid</strong> suits remote farmhouses without any electricity grid connection.<br>
+            <a href="blog/on-grid-vs-off-grid-vs-hybrid.html" class="inline-block mt-2 font-semibold text-emerald-600 hover:underline">Read our complete system comparison guide &rarr;</a>
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT & LOCATION SECTION ================= -->
+  <section id="contact" class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-8 sm:p-12 lg:p-16 text-white shadow-card overflow-hidden relative">
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="grid lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-7 space-y-6">
+            <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-400 bg-emerald-500/20 border border-emerald-500/30 px-3 py-1 rounded-full">
+              Get In Touch
+            </span>
+            <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white tracking-tight leading-tight">
+              Ready to Make the Switch to Solar? Schedule Your Free Roof Survey.
             </h2>
-          </div>
-
-          <div class="grid md:grid-cols-2 gap-8 items-center">
-            <!-- Left: Image + locations -->
-            <div class="reveal">
-              <div class="rounded-[20px] overflow-hidden shadow-card mb-6">
-                <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="w-full h-56 md:h-64 object-cover" alt="Mysore Palace and Karnataka region" />
-              </div>
-              <div class="flex flex-wrap gap-2">
-                <span class="text-xs font-medium bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-700">Mysuru</span>
-                <span class="text-xs font-medium bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-700">Coorg</span>
-                <span class="text-xs font-medium bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-700">Bengaluru</span>
-                <span class="text-xs font-medium bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-700">Mandya</span>
-                <span class="text-xs font-medium bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-700">Hassan</span>
-                <span class="text-xs font-medium bg-white border border-slate-200 px-3 py-1.5 rounded-full text-slate-700">Chamrajnagar</span>
-              </div>
-            </div>
-
-            <!-- Right: Segment coverage stats from Sri Energy -->
-            <div class="space-y-5 reveal reveal-delay-1">
-              <div>
-                <div class="flex justify-between text-sm mb-1.5">
-                  <span class="font-medium text-slate-800">Residences & Apartments</span>
-                  <span class="font-semibold text-green-600">90%</span>
-                </div>
-                <div class="h-2 bg-slate-200 rounded-full overflow-hidden">
-                  <div class="h-full bg-green-500 rounded-full" style="width:90%"></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between text-sm mb-1.5">
-                  <span class="font-medium text-slate-800">Schools & Colleges</span>
-                  <span class="font-semibold text-green-600">80%</span>
-                </div>
-                <div class="h-2 bg-slate-200 rounded-full overflow-hidden">
-                  <div class="h-full bg-green-500 rounded-full" style="width:80%"></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between text-sm mb-1.5">
-                  <span class="font-medium text-slate-800">Hospitals & Industries</span>
-                  <span class="font-semibold text-green-600">86%</span>
-                </div>
-                <div class="h-2 bg-slate-200 rounded-full overflow-hidden">
-                  <div class="h-full bg-green-500 rounded-full" style="width:86%"></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between text-sm mb-1.5">
-                  <span class="font-medium text-slate-800">Agricultural Sector</span>
-                  <span class="font-semibold text-green-600">98%</span>
-                </div>
-                <div class="h-2 bg-slate-200 rounded-full overflow-hidden">
-                  <div class="h-full bg-green-500 rounded-full" style="width:98%"></div>
-                </div>
-              </div>
-
-              <div class="pt-4 flex flex-wrap gap-3">
-                <a href="#estimate" class="inline-flex items-center gap-2 bg-slate-900 text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-slate-800 transition">
-                  Get A Quote
-                </a>
-                <a href="#contact" class="inline-flex items-center gap-2 border border-slate-300 text-slate-700 text-sm font-medium px-5 py-2.5 rounded-full hover:bg-white transition">
-                  Contact Us
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========== FAQ (AEO) ========== -->
-      <section id="faq" class="px-5 md:px-10 pb-16 md:pb-20">
-        <div class="text-center mb-10 reveal">
-          <p class="text-xs font-medium tracking-widest text-slate-400 uppercase mb-3">Common questions</p>
-          <h2 class="text-2xl md:text-3xl font-semibold text-slate-900">Rooftop solar FAQ — Mysore &amp; Coorg</h2>
-        </div>
-        <div class="max-w-3xl mx-auto space-y-4 reveal">
-          <details class="group bg-white rounded-2xl border border-slate-100 shadow-card p-5">
-            <summary class="font-semibold text-slate-900 cursor-pointer list-none flex justify-between items-center">
-              Is Sri Energy eligible for PM Surya Ghar subsidy?
-              <span class="text-slate-400 group-open:rotate-180 transition">▼</span>
-            </summary>
-            <p class="mt-3 text-sm text-slate-600 leading-relaxed">Yes. We design and install rooftop solar systems that qualify for the PM Surya Ghar Muft Bijli Yojana in Karnataka. We handle paperwork and DISCOM approvals for homes in Mysore, Coorg and nearby districts.</p>
-          </details>
-          <details class="group bg-white rounded-2xl border border-slate-100 shadow-card p-5">
-            <summary class="font-semibold text-slate-900 cursor-pointer list-none flex justify-between items-center">
-              How much does rooftop solar cost in Mysore?
-              <span class="text-slate-400 group-open:rotate-180 transition">▼</span>
-            </summary>
-            <p class="mt-3 text-sm text-slate-600 leading-relaxed">Typical residential systems range from about ₹45,000–₹70,000 per kW before subsidy, depending on panel brand, inverter and roof type. After PM Surya Ghar subsidy the net cost is much lower. Request a free site survey for an exact quote.</p>
-          </details>
-          <details class="group bg-white rounded-2xl border border-slate-100 shadow-card p-5">
-            <summary class="font-semibold text-slate-900 cursor-pointer list-none flex justify-between items-center">
-              Do you install solar in Coorg and rural areas?
-              <span class="text-slate-400 group-open:rotate-180 transition">▼</span>
-            </summary>
-            <p class="mt-3 text-sm text-slate-600 leading-relaxed">Yes. We serve Mysuru, Kodagu (Coorg), Mandya, Hassan and surrounding areas — including solar pumpsets for farmers and hybrid systems for homes with unreliable grid power.</p>
-          </details>
-          <details class="group bg-white rounded-2xl border border-slate-100 shadow-card p-5">
-            <summary class="font-semibold text-slate-900 cursor-pointer list-none flex justify-between items-center">
-              On-grid, off-grid or hybrid — which should I choose?
-              <span class="text-slate-400 group-open:rotate-180 transition">▼</span>
-            </summary>
-            <p class="mt-3 text-sm text-slate-600 leading-relaxed">On-grid suits stable electricity and net metering. Hybrid with lithium battery is best for power cuts. Off-grid fits remote locations. We recommend the right type after a free load and site assessment. <a href="blog/on-grid-vs-off-grid-vs-hybrid.html" class="text-green-600 font-medium hover:underline">Read the full comparison →</a></p>
-          </details>
-        </div>
-      </section>
-
-      <!-- ========== TESTIMONIALS ========== -->
-      <section class="px-5 md:px-10 pb-16 md:pb-20">
-        <div class="text-center mb-10 reveal">
-          <p class="text-xs font-medium tracking-widest text-slate-400 uppercase mb-3">Testimonials</p>
-          <h2 class="text-2xl md:text-3xl font-semibold text-slate-900">What our customers are saying.</h2>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div class="testimonial-card bg-white rounded-[18px] p-5 border border-slate-100/80 shadow-card">
-            <div class="flex items-start gap-3 mb-3">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&q=80" class="w-10 h-10 rounded-full object-cover" alt="Suresh Reddy" />
-              <div>
-                <p class="text-sm font-semibold text-slate-900">Suresh Reddy</p>
-                <p class="text-xs text-slate-400">Homeowner, Mysuru</p>
-              </div>
-            </div>
-            <p class="text-sm text-slate-600 leading-relaxed">"Sri Energy made our switch to solar seamless. Their Loom Solar panels are top-notch, and their service was outstanding. Highly recommended!"</p>
-          </div>
-          <div class="testimonial-card active bg-sky-50 rounded-[18px] p-5 border border-sky-100 shadow-card relative overflow-hidden">
-            <div class="flex items-start gap-3 mb-3">
-              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&q=80" class="w-10 h-10 rounded-full object-cover" alt="Meera Sharma" />
-              <div>
-                <p class="text-sm font-semibold text-slate-900">Meera Sharma</p>
-                <p class="text-xs text-slate-400">Small Business Owner</p>
-              </div>
-            </div>
-            <p class="text-sm text-slate-700 leading-relaxed">"The quality of Sri Energy’s products and their professional support have been exceptional. We’re thrilled with our new solar setup!"</p>
-          </div>
-          <div class="testimonial-card bg-white rounded-[18px] p-5 border border-slate-100/80 shadow-card">
-            <div class="flex items-start gap-3 mb-3">
-              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&q=80" class="w-10 h-10 rounded-full object-cover" alt="Vikram Singh" />
-              <div>
-                <p class="text-sm font-semibold text-slate-900">Vikram Singh</p>
-                <p class="text-xs text-slate-400">Industrial Facility Manager</p>
-              </div>
-            </div>
-            <p class="text-sm text-slate-600 leading-relaxed">"Sri Energy delivered exactly what we needed—efficient solar panels and reliable service. Their commitment to quality is unmatched."</p>
-          </div>
-          <div class="testimonial-card bg-white rounded-[18px] p-5 border border-slate-100/80 shadow-card">
-            <div class="flex items-start gap-3 mb-3">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&q=80" class="w-10 h-10 rounded-full object-cover" alt="Ramesh Gowda" />
-              <div>
-                <p class="text-sm font-semibold text-slate-900">Ramesh Gowda</p>
-                <p class="text-xs text-slate-400">Farmer, Coorg</p>
-              </div>
-            </div>
-            <p class="text-sm text-slate-600 leading-relaxed">"Solar pumpset from Sri Energy has transformed our irrigation. Reliable power even in remote areas with zero electricity bills."</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========== FULL WIDTH CTA IMAGE ========== -->
-      <section class="relative h-64 md:h-80 overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80"
-          alt="Team meeting"
-          class="absolute inset-0 w-full h-full object-cover"
-        />
-        <div class="absolute inset-0 bg-black/40"></div>
-        <div class="relative h-full flex items-center justify-center px-5">
-          <h2 class="text-2xl md:text-4xl font-semibold text-white text-center tracking-tight reveal">
-            Shine Brighter Together with Sri Energy
-          </h2>
-        </div>
-      </section>
-
-      <!-- ========== FOOTER ========== -->
-      <footer class="bg-slate-900 text-white">
-        <div class="px-5 md:px-10 py-12 md:py-16">
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
-            <a href="index.html" class="flex items-center gap-2">
-              <img src="logo-sun.png" alt="Sri Energy" class="h-9 w-9 object-contain" />
-              <span class="font-semibold text-lg text-white">Energy</span>
-            </a>
-            <nav class="flex flex-wrap gap-6 text-sm text-slate-300">
-              <a href="#home" class="hover:text-white transition">Home</a>
-              <a href="#solutions" class="hover:text-white transition">Solutions</a>
-              <a href="#services" class="hover:text-white transition">Services</a>
-              <a href="#about" class="hover:text-white transition">About us</a>
-              <a href="#contact" class="hover:text-white transition">Contact</a>
-            </nav>
-            <a href="#estimate" class="inline-flex items-center gap-2 text-sm font-medium border border-slate-600 px-4 py-2 rounded-full hover:bg-white hover:text-slate-900 transition">
-              Get A Quote
-            </a>
-          </div>
-
-          <div class="border-t border-slate-800 pt-10" id="contact">
-            <h3 class="text-xl md:text-2xl font-semibold text-center mb-2">
-              Contact Sri Energy
-            </h3>
-            <p class="text-center text-slate-400 text-sm mb-6">
-              +91 9019914411 · subaiah@srienergy.in<br>
-              P.G Street, Sahithya Bhavan Rd, Vijaynagar, Mysuru 570002
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Our engineering office is in Vijaynagar, Mysuru. Contact Subaiah and our senior solar engineers for straightforward advice and quick quotes.
             </p>
-            <form class="max-w-md mx-auto flex gap-2" onsubmit="event.preventDefault(); alert('Thank you! We will contact you shortly.');">
-              <input type="email" placeholder="Enter your email" required class="flex-1 bg-slate-800 border border-slate-700 text-sm rounded-full px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-green-500/40 placeholder:text-slate-500" />
-              <button type="submit" class="bg-green-500 hover:bg-green-400 text-slate-900 text-sm font-medium px-5 py-2.5 rounded-full transition flex items-center gap-1.5">
-                Get A Quote
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+
+            <div class="space-y-4 pt-2 text-sm text-slate-300">
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                </div>
+                <div>
+                  <strong class="text-white">Office Address:</strong><br>
+                  P.G Street, Sahithya Bhavan Rd, Vijaynagar, Mysuru, Karnataka 570002
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/></svg>
+                </div>
+                <div>
+                  <strong class="text-white">Direct Phone:</strong> 
+                  <a href="tel:+919019914411" class="text-emerald-400 hover:underline ml-1 font-semibold">+91 9019914411</a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                </div>
+                <div>
+                  <strong class="text-white">Email:</strong> 
+                  <a href="mailto:subaiah@srienergy.in" class="text-emerald-400 hover:underline ml-1">subaiah@srienergy.in</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 flex flex-wrap gap-3">
+              <a href="tel:+919019914411" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold text-sm px-6 py-3 rounded-full transition shadow-md">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/></svg>
+                <span>Call Now: +91 9019914411</span>
+              </a>
+              <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20would%20like%20to%20book%20a%20free%20rooftop%20survey." target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm px-5 py-3 rounded-full border border-slate-700 transition">
+                <span>WhatsApp Instant Chat</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Callback Card -->
+          <div class="lg:col-span-5 bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/15">
+            <h3 class="font-display font-bold text-lg text-white mb-2">Request Fast Callback</h3>
+            <p class="text-xs text-slate-300 mb-4">Enter your number and we’ll call back within 15 minutes during work hours.</p>
+            
+            <form onsubmit="handleQuickCallback(event)" class="space-y-3">
+              <input 
+                type="tel" 
+                id="callbackPhone" 
+                placeholder="Enter 10-digit mobile number" 
+                required 
+                class="w-full text-sm px-4 py-2.5 rounded-xl bg-slate-800/90 border border-slate-700 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+              />
+              <button 
+                type="submit" 
+                class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm py-2.5 rounded-xl transition shadow-md"
+              >
+                Request Call
               </button>
             </form>
-          </div>
-
-          <div class="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-            <p>© 2026 Sri Energy. All rights reserved.</p>
-            <div class="flex gap-6">
-              <a href="tel:+919019914411" class="hover:text-slate-300">+91 9019914411</a>
-              <a href="mailto:subaiah@srienergy.in" class="hover:text-slate-300">subaiah@srienergy.in</a>
+            <div id="callbackSuccess" class="hidden mt-3 p-3 rounded-lg bg-emerald-500/20 text-emerald-300 text-xs text-center font-medium">
+              ✓ Number saved! Our engineer will call you shortly.
             </div>
           </div>
+
         </div>
-      </footer>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-slate-950 text-white border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+        
+        <!-- Brand Info -->
+        <div class="col-span-2">
+          <a href="index.html" class="flex items-center gap-2.5 mb-4">
+            <div class="w-9 h-9 rounded-xl bg-amber-500/20 flex items-center justify-center p-1">
+              <img src="logo-sun.png" alt="Sri Energy Logo" class="h-full w-full object-contain" />
+            </div>
+            <span class="font-display font-extrabold text-xl text-white">Sri Energy</span>
+          </a>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            Empowering Mysuru and Coorg with high-efficiency rooftop solar installations, PM Surya Ghar subsidy processing, and lithium battery energy storage.
+          </p>
+          <div class="mt-4 flex items-center gap-2 text-xs text-emerald-400 font-semibold">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <span>ISO 9001:2015 Certified Installation Quality</span>
+          </div>
+        </div>
+
+        <!-- Products -->
+        <div>
+          <p class="font-display font-bold text-sm text-white mb-3">Solar Hardware</p>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="solar-panels.html" class="hover:text-emerald-400 transition">Solar Panels</a></li>
+            <li><a href="solar-inverters.html" class="hover:text-emerald-400 transition">Solar Inverters</a></li>
+            <li><a href="lithium-battery.html" class="hover:text-emerald-400 transition">Lithium Batteries</a></li>
+            <li><a href="solar-inverters.html#hybrid" class="hover:text-emerald-400 transition">Hybrid Systems</a></li>
+            <li><a href="blog/solar-pumpset-farmers-coorg.html" class="hover:text-emerald-400 transition">Solar Pumpsets</a></li>
+          </ul>
+        </div>
+
+        <!-- Guides & Blog -->
+        <div>
+          <p class="font-display font-bold text-sm text-white mb-3">Solar Guides</p>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="blog/pm-surya-ghar-subsidy-guide.html" class="hover:text-emerald-400 transition">PM Surya Ghar Guide</a></li>
+            <li><a href="blog/rooftop-solar-cost-mysore.html" class="hover:text-emerald-400 transition">Solar Cost Mysore</a></li>
+            <li><a href="blog/on-grid-vs-off-grid-vs-hybrid.html" class="hover:text-emerald-400 transition">System Comparison</a></li>
+            <li><a href="blog/solar-pumpset-farmers-coorg.html" class="hover:text-emerald-400 transition">Coorg Farming Solar</a></li>
+            <li><a href="blog/index.html" class="hover:text-emerald-400 transition">All Blog Articles</a></li>
+          </ul>
+        </div>
+
+        <!-- Locations -->
+        <div>
+          <p class="font-display font-bold text-sm text-white mb-3">Locations Served</p>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li>Mysuru (City &amp; Rural)</li>
+            <li>Kodagu (Coorg / Madikeri)</li>
+            <li>Mandya &amp; Srirangapatna</li>
+            <li>Hassan &amp; Sakleshpur</li>
+            <li>Chamarajanagar</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-slate-800/80 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2026 Sri Energy. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="https://srienergy.vercel.app/" class="hover:text-slate-400 transition">Live Deployment</a>
+          <a href="sitemap.xml" class="hover:text-slate-400 transition">Sitemap</a>
+          <a href="robots.txt" class="hover:text-slate-400 transition">Robots.txt</a>
+          <a href="tel:+919019914411" class="text-emerald-400 font-semibold hover:underline">+91 9019914411</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= STICKY MOBILE BOTTOM BAR ================= -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2 shadow-2xl">
+    <div class="grid grid-cols-3 gap-2 text-center text-xs font-semibold">
+      
+      <a href="tel:+919019914411" class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-slate-100 text-slate-800 active:bg-slate-200">
+        <svg class="w-4 h-4 text-slate-700 mb-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/></svg>
+        <span>Call</span>
+      </a>
+
+      <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20would%20like%20a%20free%20rooftop%20solar%20quote" target="_blank" rel="noopener" class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-emerald-50 text-emerald-800 active:bg-emerald-100">
+        <svg class="w-4 h-4 text-emerald-600 mb-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.179.182-.077.357.101.173.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+
+      <a href="#estimate" class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-emerald-600 text-white font-bold shadow-md active:bg-emerald-700">
+        <svg class="w-4 h-4 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        <span>Free Quote</span>
+      </a>
 
     </div>
   </div>
 
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
   <script>
-    // Mobile menu
+    // 1. Mobile Menu Toggle
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    const menuIconClosed = document.getElementById('menuIconClosed');
+    const menuIconOpen = document.getElementById('menuIconOpen');
 
-    // Navbar scroll effect
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 20) navbar.classList.add('nav-scrolled');
-      else navbar.classList.remove('nav-scrolled');
-    });
-
-    // Scroll reveal
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(el => observer.observe(el));
-
-    // Process steps interaction
-    const steps = document.querySelectorAll('.process-step');
-    steps.forEach(step => {
-      step.addEventListener('click', () => {
-        steps.forEach(s => {
-          s.classList.remove('active');
-          s.classList.add('bg-slate-50', 'border-slate-100');
-        });
-        step.classList.add('active');
-        step.classList.remove('bg-slate-50', 'border-slate-100');
-      });
-    });
-
-    // Map tooltips
-    const tooltip = document.getElementById('mapTooltip');
-    const tipCity = document.getElementById('tipCity');
-    const tipInfo = document.getElementById('tipInfo');
-    document.querySelectorAll('.map-dot').forEach(dot => {
-      dot.addEventListener('mouseenter', (e) => {
-        tipCity.textContent = dot.dataset.city;
-        tipInfo.textContent = dot.dataset.info;
-        tooltip.classList.remove('hidden');
-        const rect = dot.getBoundingClientRect();
-        const parent = dot.parentElement.getBoundingClientRect();
-        tooltip.style.left = (rect.left - parent.left + 16) + 'px';
-        tooltip.style.top = (rect.top - parent.top - 50) + 'px';
-      });
-      dot.addEventListener('mouseleave', () => tooltip.classList.add('hidden'));
-    });
-
-    // Animate percentage on scroll
-    let animated = false;
-    const percentEl = document.getElementById('statPercent');
-    const percentObserver = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting && !animated) {
-        animated = true;
-        let current = 0;
-        const target = 90;
-        const timer = setInterval(() => {
-          current += 1;
-          percentEl.textContent = current + '%';
-          if (current >= target) clearInterval(timer);
-        }, 20);
+    menuBtn?.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      if (isHidden) {
+        menuIconClosed.classList.remove('hidden');
+        menuIconOpen.classList.add('hidden');
+      } else {
+        menuIconClosed.classList.add('hidden');
+        menuIconOpen.classList.remove('hidden');
       }
-    }, { threshold: 0.5 });
-    if (percentEl) percentObserver.observe(percentEl);
+    });
 
-    // Testimonial hover highlight
-    document.querySelectorAll('.testimonial-card').forEach(card => {
-      card.addEventListener('mouseenter', () => {
-        document.querySelectorAll('.testimonial-card').forEach(c => c.classList.remove('active', 'bg-sky-50', 'border-sky-100'));
-        card.classList.add('active', 'bg-sky-50', 'border-sky-100');
+    // Close mobile menu when clicking any nav link
+    mobileMenu?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIconClosed.classList.remove('hidden');
+        menuIconOpen.classList.add('hidden');
       });
     });
+
+    // 2. Solar Savings Calculator Logic
+    function calculateSolarData(bill) {
+      bill = parseFloat(bill) || 3500;
+      let kw = 3;
+      let subsidy = 78000;
+      let roofSqFt = 300;
+      let units = Math.round(bill / 7.5); // avg ₹7.5 per unit in Karnataka
+
+      if (bill <= 1800) {
+        kw = 1;
+        subsidy = 30000;
+        roofSqFt = 100;
+      } else if (bill <= 3000) {
+        kw = 2;
+        subsidy = 60000;
+        roofSqFt = 200;
+      } else if (bill <= 5500) {
+        kw = 3;
+        subsidy = 78000;
+        roofSqFt = 300;
+      } else if (bill <= 8000) {
+        kw = 5;
+        subsidy = 78000;
+        roofSqFt = 500;
+      } else if (bill <= 12000) {
+        kw = 8;
+        subsidy = 78000;
+        roofSqFt = 800;
+      } else {
+        kw = 10;
+        subsidy = 78000;
+        roofSqFt = 1000;
+      }
+
+      const monthlySavings = Math.round(bill * 0.90);
+      const annualSavings = monthlySavings * 12;
+      const lifetimeSavingsLakhs = ((annualSavings * 25) / 100000).toFixed(1);
+
+      return {
+        bill,
+        kw,
+        subsidy,
+        roofSqFt,
+        units,
+        monthlySavings,
+        lifetimeSavingsLakhs
+      };
+    }
+
+    function updateCalculator(val) {
+      const data = calculateSolarData(val);
+      document.getElementById('billDisplay').innerHTML = `₹${parseInt(data.bill).toLocaleString('en-IN')} <span class="text-xs font-normal text-slate-500">/ month</span>`;
+      document.getElementById('calcKW').textContent = `${data.kw} kW`;
+      document.getElementById('calcUnits').textContent = `~${data.units} units/month`;
+      document.getElementById('calcSubsidy').textContent = `₹${data.subsidy.toLocaleString('en-IN')}`;
+      document.getElementById('calcMonthlySave').textContent = `₹${data.monthlySavings.toLocaleString('en-IN')}`;
+      document.getElementById('calcLifetimeSave').textContent = `₹${data.lifetimeSavingsLakhs} Lakhs`;
+      document.getElementById('calcRoof').textContent = `~${data.roofSqFt} sq. ft. shadow-free area`;
+    }
+
+    function setBillValue(val) {
+      const slider = document.getElementById('billRange');
+      if (slider) {
+        slider.value = val;
+        updateCalculator(val);
+      }
+    }
+
+    function applyCalculatorToQuote() {
+      const slider = document.getElementById('billRange');
+      const val = slider ? slider.value : 3500;
+      const data = calculateSolarData(val);
+      
+      const billSelect = document.getElementById('billSelect');
+      if (billSelect) {
+        if (data.kw <= 2) billSelect.selectedIndex = 0;
+        else if (data.kw === 3) billSelect.selectedIndex = 1;
+        else if (data.kw <= 5) billSelect.selectedIndex = 2;
+        else if (data.kw <= 10) billSelect.selectedIndex = 3;
+        else billSelect.selectedIndex = 4;
+      }
+
+      const quoteSection = document.getElementById('estimate');
+      if (quoteSection) {
+        quoteSection.scrollIntoView({ behavior: 'smooth' });
+        const nameInput = document.getElementById('fullName');
+        if (nameInput) nameInput.focus();
+      }
+    }
+
+    // 3. Lead Generation Forms
+    function handleQuoteSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('fullName').value.trim();
+      const phone = document.getElementById('phoneNumber').value.trim();
+      const city = document.getElementById('citySelect').value;
+      const bill = document.getElementById('billSelect').value;
+
+      const waMsg = encodeURIComponent(`Hi Sri Energy, I request a Free Site Survey and Solar Quote.\nName: ${name}\nPhone: ${phone}\nLocation: ${city}\nBill: ${bill}`);
+      const waUrl = `https://wa.me/919019914411?text=${waMsg}`;
+
+      const waDirectLink = document.getElementById('waDirectLink');
+      if (waDirectLink) waDirectLink.href = waUrl;
+
+      document.getElementById('quoteSuccess').classList.remove('hidden');
+      // Prompt user or open WhatsApp tab smoothly
+      setTimeout(() => {
+        window.open(waUrl, '_blank');
+      }, 600);
+    }
+
+    function handleQuickCallback(e) {
+      e.preventDefault();
+      const phone = document.getElementById('callbackPhone').value.trim();
+      document.getElementById('callbackSuccess').classList.remove('hidden');
+      setTimeout(() => {
+        const waMsg = encodeURIComponent(`Hi Sri Energy, please call me back regarding rooftop solar at: ${phone}`);
+        window.open(`https://wa.me/919019914411?text=${waMsg}`, '_blank');
+      }, 500);
+    }
+
+    // 4. Scroll Reveal
+    const reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      reveals.forEach(el => observer.observe(el));
+    } else {
+      reveals.forEach(el => el.classList.add('visible'));
+    }
   </script>
 </body>
 </html>

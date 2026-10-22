@@ -1,170 +1,433 @@
 <!DOCTYPE html>
-<html lang="en-IN">
+<html lang="en-IN" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Solar Panels Mysore | Paradea, Hypersol, RenewSys | Sri Energy</title>
   <meta name="description" content="High-efficiency solar panels in Mysore & Coorg — Paradea up to 610W, Hypersol, RenewSys EXTREME and bifacial modules. PM Surya Ghar eligible. Free quote from Sri Energy." />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="https://srienergy.in/solar-panels.html" />
   <link rel="icon" href="logo-icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo-icon.png" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Open Graph & Twitter -->
   <meta property="og:title" content="Solar Panels Mysore | Sri Energy" />
-  <meta property="og:description" content="Paradea, Hypersol & RenewSys solar panels. PM Surya Ghar eligible. Free site survey." />
+  <meta property="og:description" content="Paradea, Hypersol & RenewSys solar panels. PM Surya Ghar eligible. Free site survey in Mysore & Coorg." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://srienergy.in/solar-panels.html" />
   <meta property="og:locale" content="en_IN" />
   <meta property="og:image" content="https://srienergy.in/logo-full.png" />
   <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Schema Markup -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"CollectionPage","name":"Solar Panels","description":"High-efficiency solar panels for rooftop systems in Mysore and Coorg","url":"https://srienergy.in/solar-panels.html","isPartOf":{"@type":"WebSite","name":"Sri Energy","url":"https://srienergy.in"},"provider":{"@type":"LocalBusiness","name":"Sri Energy","telephone":"+919019914411","address":{"@type":"PostalAddress","streetAddress":"P.G Street, Sahithya Bhavan Rd, Vijaynagar","addressLocality":"Mysuru","postalCode":"570002","addressCountry":"IN"}},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://srienergy.in/"},{"@type":"ListItem","position":2,"name":"Solar Panels","item":"https://srienergy.in/solar-panels.html"}]}}
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Solar Panels Mysore",
+    "description": "High-efficiency monocrystalline and bifacial solar panels for rooftop systems in Mysore and Coorg",
+    "url": "https://srienergy.in/solar-panels.html",
+    "isPartOf": {"@type": "WebSite", "name": "Sri Energy", "url": "https://srienergy.in"},
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Sri Energy",
+      "telephone": "+919019914411",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "P.G Street, Sahithya Bhavan Rd, Vijaynagar",
+        "addressLocality": "Mysuru",
+        "postalCode": "570002",
+        "addressCountry": "IN"
+      }
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://srienergy.in/"},
+        {"@type": "ListItem", "position": 2, "name": "Solar Panels", "item": "https://srienergy.in/solar-panels.html"}
+      ]
+    }
+  }
   </script>
+
+  <!-- Tailwind CSS & Fonts -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+            }
+          },
           boxShadow: {
-            soft: '0 20px 50px -12px rgba(0,0,0,0.18)',
-            card: '0 8px 30px -6px rgba(0,0,0,0.1)',
+            'card': '0 10px 30px -10px rgba(15, 23, 42, 0.08)',
+            'card-hover': '0 20px 40px -15px rgba(15, 23, 42, 0.16)',
           }
         }
       }
     }
   </script>
   <style>
+    h1, h2, h3, .font-display { font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; }
     body { font-family: 'Inter', system-ui, sans-serif; }
+    .pb-safe-action { padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px)); }
+    @media (min-width: 768px) { .pb-safe-action { padding-bottom: 0; } }
   </style>
 </head>
-<body class="bg-slate-100 text-slate-900 antialiased">
-  <div class="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 py-6 md:py-12 px-3 md:px-8">
-    <div class="max-w-6xl mx-auto bg-white rounded-[28px] md:rounded-[32px] overflow-hidden shadow-soft border border-white/10">
+<body class="bg-slate-50 text-slate-900 antialiased pb-safe-action selection:bg-brand-500 selection:text-white">
 
-      <!-- NAV -->
-      <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
-        <div class="flex items-center justify-between px-5 md:px-8 py-4">
-          <a href="index.html" class="flex items-center gap-2">
-            <img src="logo-sun.png" alt="Sri Energy" class="h-9 w-9 object-contain" />
-            <span class="font-semibold text-lg tracking-tight text-slate-900">Energy</span>
-          </a>
-          <nav class="hidden md:flex items-center gap-0.5 bg-slate-100/90 rounded-full px-1.5 py-1 text-[13px] font-medium text-slate-700">
-            <a href="index.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition">Home</a>
-            <a href="solar-panels.html" class="px-4 py-1.5 rounded-full bg-white shadow-sm">Solar Panels</a>
-            <a href="solar-inverters.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition">Inverters</a>
-            <a href="lithium-battery.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition">Batteries</a>
-            <a href="index.html#contact" class="px-4 py-1.5 rounded-full hover:bg-white hover:shadow-sm transition">Contact</a>
-          </nav>
-          <a href="index.html#estimate" class="hidden sm:inline-flex items-center gap-2 text-[13px] font-medium bg-slate-900 text-white px-4 py-2 rounded-full hover:bg-slate-800 transition shadow-sm">
-            Get A Quote
-          </a>
-        </div>
-      </header>
-
-      <!-- HERO -->
-      <section class="relative h-64 md:h-80 overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" class="absolute inset-0 w-full h-full object-cover" alt="Solar panels" />
-        <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-black/20"></div>
-        <div class="relative h-full flex flex-col justify-end px-5 md:px-10 pb-10">
-          <p class="text-green-400 text-xs font-medium tracking-widest uppercase mb-2">Products</p>
-          <h1 class="text-3xl md:text-4xl font-semibold text-white">Solar Panels</h1>
-          <p class="text-white/80 text-sm md:text-base mt-2 max-w-xl">High-efficiency modules for residential, commercial & utility-scale installations. PM Surya Ghar eligible.</p>
-        </div>
-      </section>
-
-      <!-- PRODUCTS GRID -->
-      <section class="px-5 md:px-10 py-12 md:py-16">
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-          <div class="bg-white rounded-[20px] border border-slate-100 shadow-card overflow-hidden hover:shadow-lg transition">
-            <div class="h-40 bg-slate-100 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="Paradea 610W" />
-            </div>
-            <div class="p-5">
-              <span class="text-xs font-medium text-green-600 bg-green-50 px-2.5 py-1 rounded-full">Up to 610W</span>
-              <h3 class="font-semibold text-slate-900 mt-3">Paradea up to 610W</h3>
-              <p class="text-sm text-slate-500 mt-2 leading-relaxed">High-efficiency power output for residential, commercial and utility-scale installations. Advanced cell technology, durable construction, superior performance even in challenging weather.</p>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-[20px] border border-slate-100 shadow-card overflow-hidden hover:shadow-lg transition">
-            <div class="h-40 bg-slate-100 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="Paradea 565W" />
-            </div>
-            <div class="p-5">
-              <span class="text-xs font-medium text-green-600 bg-green-50 px-2.5 py-1 rounded-full">Up to 565W</span>
-              <h3 class="font-semibold text-slate-900 mt-3">Paradea up to 565W</h3>
-              <p class="text-sm text-slate-500 mt-2 leading-relaxed">Engineered for superior energy generation and long-term reliability. Maximum performance and higher returns for residential and commercial installations.</p>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-[20px] border border-slate-100 shadow-card overflow-hidden hover:shadow-lg transition">
-            <div class="h-40 bg-slate-100 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="Hypersol 485W" />
-            </div>
-            <div class="p-5">
-              <span class="text-xs font-medium text-green-600 bg-green-50 px-2.5 py-1 rounded-full">Up to 485W</span>
-              <h3 class="font-semibold text-slate-900 mt-3">Hypersol up to 485W</h3>
-              <p class="text-sm text-slate-500 mt-2 leading-relaxed">High power output and superior efficiency even in limited installation space. Weather-resistant design for long-term reliable solar production.</p>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-[20px] border border-slate-100 shadow-card overflow-hidden hover:shadow-lg transition">
-            <div class="h-40 bg-slate-100 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="RenewSys EXTREME 615Wp" />
-            </div>
-            <div class="p-5">
-              <span class="text-xs font-medium text-green-600 bg-green-50 px-2.5 py-1 rounded-full">615 Wp</span>
-              <h3 class="font-semibold text-slate-900 mt-3">RenewSys EXTREME 132X 615Wp</h3>
-              <p class="text-sm text-slate-500 mt-2 leading-relaxed">High-performance energy generation with excellent low-light performance. Ideal for large residential and commercial installations.</p>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-[20px] border border-slate-100 shadow-card overflow-hidden hover:shadow-lg transition">
-            <div class="h-40 bg-slate-100 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="Bifacial Dual Glass" />
-            </div>
-            <div class="p-5">
-              <span class="text-xs font-medium text-green-600 bg-green-50 px-2.5 py-1 rounded-full">680–715W</span>
-              <h3 class="font-semibold text-slate-900 mt-3">BiN-03 Bifacial Dual Glass</h3>
-              <p class="text-sm text-slate-500 mt-2 leading-relaxed">Framed dual-glass bifacial module capturing sunlight from both sides. Enhanced energy generation for commercial installations.</p>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-[20px] border border-slate-100 shadow-card overflow-hidden hover:shadow-lg transition">
-            <div class="h-40 bg-slate-100 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="RenewSys 144X" />
-            </div>
-            <div class="p-5">
-              <span class="text-xs font-medium text-green-600 bg-green-50 px-2.5 py-1 rounded-full">565–600 Wp</span>
-              <h3 class="font-semibold text-slate-900 mt-3">RenewSys EXTREME 144X</h3>
-              <p class="text-sm text-slate-500 mt-2 leading-relaxed">High-efficiency module for large-scale and commercial installations. Excellent low-light performance and robust build quality.</p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="mt-12 text-center">
-          <a href="index.html#estimate" class="inline-flex items-center gap-2 bg-slate-900 text-white text-sm font-medium px-6 py-3 rounded-full hover:bg-slate-800 transition">
-            Get A Quote for Solar Panels
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </section>
-
-      <!-- FOOTER -->
-      <footer class="bg-slate-900 text-white px-5 md:px-10 py-10">
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
-          <a href="index.html" class="flex items-center gap-2">
-            <img src="logo-sun.png" alt="Sri Energy" class="h-8 w-8 object-contain" />
-            <span class="font-semibold text-white">Energy</span>
-          </a>
-          <p class="text-slate-400 text-xs">+91 9019914411 · subaiah@srienergy.in · Mysuru</p>
-          <p class="text-slate-500 text-xs">© 2026 Sri Energy</p>
-        </div>
-      </footer>
-
+  <!-- ================= TOP NOTIFICATION ================= -->
+  <div class="bg-slate-900 text-white text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <span class="text-slate-300">
+        ⚡ Tier-1 Monocrystalline &amp; Bifacial Panels with <strong class="text-white">25-Year Performance Warranty</strong>
+      </span>
+      <a href="tel:+919019914411" class="hidden sm:flex items-center gap-1.5 text-emerald-400 font-semibold hover:underline">
+        <span>+91 9019914411</span>
+      </a>
     </div>
   </div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2.5 group">
+          <div class="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200/60 flex items-center justify-center p-1.5 shadow-sm group-hover:scale-105 transition-transform">
+            <img src="logo-sun.png" alt="Sri Energy Logo" class="h-full w-full object-contain" />
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-xl tracking-tight text-slate-900 group-hover:text-emerald-600 transition-colors">
+              Sri Energy
+            </span>
+            <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400 -mt-1">
+              Mysuru &amp; Coorg
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-1 bg-slate-100/80 p-1.5 rounded-full border border-slate-200/70 text-[13px] font-semibold text-slate-700">
+          <a href="index.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 transition">Home</a>
+          <a href="solar-panels.html" class="px-4 py-1.5 rounded-full bg-white text-slate-900 shadow-sm transition">Solar Panels</a>
+          <a href="solar-inverters.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 transition">Inverters</a>
+          <a href="lithium-battery.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 transition">Batteries</a>
+          <a href="index.html#calculator" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 transition">Calculator</a>
+          <a href="blog/index.html" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 transition">Blog</a>
+          <a href="index.html#contact" class="px-4 py-1.5 rounded-full hover:bg-white hover:text-slate-900 transition">Contact</a>
+        </nav>
+
+        <!-- Right Action Button -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="index.html#estimate" class="inline-flex items-center gap-2 text-sm font-semibold bg-slate-900 text-white px-5 py-2.5 rounded-full hover:bg-emerald-600 transition">
+            <span>Get A Quote</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <button id="menuBtn" class="lg:hidden p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 shadow-xl px-5 pt-3 pb-6 space-y-2">
+      <a href="index.html" class="block px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Home</a>
+      <a href="solar-panels.html" class="block px-3 py-2 rounded-xl font-semibold text-emerald-800 bg-emerald-50">Solar Panels</a>
+      <a href="solar-inverters.html" class="block px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Solar Inverters</a>
+      <a href="lithium-battery.html" class="block px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Lithium Batteries</a>
+      <a href="blog/index.html" class="block px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Solar Blog</a>
+      <a href="index.html#contact" class="block px-3 py-2 rounded-xl font-medium text-slate-700 hover:bg-slate-50">Contact Us</a>
+      <a href="index.html#estimate" class="block text-center font-bold bg-emerald-600 text-white py-2.5 rounded-xl mt-3">Request Free Quote</a>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="relative bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white py-16 sm:py-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-25 mix-blend-luminosity">
+      <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1800&q=80" alt="Solar panels" class="w-full h-full object-cover" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4">
+          PM Surya Ghar Subsidy Ready
+        </span>
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight">
+          High-Efficiency Solar Panels in Mysore &amp; Coorg
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
+          Premium Tier-1 Mono Perc, TopCon, and Bifacial solar PV modules. Engineered for maximum power density, higher yield in cloudy Karnataka weather, and 25-year performance warranties.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRODUCT CATALOG GRID ================= -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+        <div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 tracking-tight">
+            Curated Solar Panel Range
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">
+            All modules meet BIS and MNRE standards required for PM Surya Ghar subsidy claims.
+          </p>
+        </div>
+        <span class="text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 px-3 py-1.5 rounded-full w-fit">
+          25-Year Linear Warranty
+        </span>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Card 1 -->
+        <div class="bg-slate-50 rounded-2xl border border-slate-200/80 shadow-card overflow-hidden hover:shadow-card-hover hover:border-emerald-300 transition-all flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=700&q=80" alt="Paradea 610W" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-slate-900/85 backdrop-blur-sm text-emerald-400 text-xs font-bold px-3 py-1 rounded-full">
+                Up to 610W
+              </span>
+            </div>
+            <div class="p-6">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-100/60 px-2.5 py-0.5 rounded-md">TopCon Technology</span>
+              <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Paradea up to 610W</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Ultra-high-efficiency TopCon cells designed for maximum power output in limited roof space. Low degradation rate and superior temperature coefficient for Mysore summers.
+              </p>
+              <div class="mt-4 pt-3 border-t border-slate-200/80 grid grid-cols-2 gap-2 text-[11px] text-slate-500 font-medium">
+                <div>Efficiency: <strong class="text-slate-800">22.8%+</strong></div>
+                <div>Warranty: <strong class="text-slate-800">25 Years</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20am%20interested%20in%20Paradea%20610W%20solar%20panels." target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-xl font-bold text-xs bg-slate-900 text-white hover:bg-emerald-600 transition">
+              <span>Inquire This Model</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-slate-50 rounded-2xl border border-slate-200/80 shadow-card overflow-hidden hover:shadow-card-hover hover:border-emerald-300 transition-all flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=700&q=80" alt="Paradea 565W" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-slate-900/85 backdrop-blur-sm text-emerald-400 text-xs font-bold px-3 py-1 rounded-full">
+                Up to 565W
+              </span>
+            </div>
+            <div class="p-6">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-100/60 px-2.5 py-0.5 rounded-md">Mono Perc</span>
+              <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Paradea up to 565W</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Engineered for superior energy generation and long-term reliability. Maximum performance and highest return on investment for residential rooftop net-metering.
+              </p>
+              <div class="mt-4 pt-3 border-t border-slate-200/80 grid grid-cols-2 gap-2 text-[11px] text-slate-500 font-medium">
+                <div>Efficiency: <strong class="text-slate-800">21.5%+</strong></div>
+                <div>Warranty: <strong class="text-slate-800">25 Years</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20am%20interested%20in%20Paradea%20565W%20solar%20panels." target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-xl font-bold text-xs bg-slate-900 text-white hover:bg-emerald-600 transition">
+              <span>Inquire This Model</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-slate-50 rounded-2xl border border-slate-200/80 shadow-card overflow-hidden hover:shadow-card-hover hover:border-emerald-300 transition-all flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=700&q=80" alt="RenewSys EXTREME 615Wp" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-slate-900/85 backdrop-blur-sm text-emerald-400 text-xs font-bold px-3 py-1 rounded-full">
+                615 Wp
+              </span>
+            </div>
+            <div class="p-6">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-blue-700 bg-blue-100/60 px-2.5 py-0.5 rounded-md">Extreme Durability</span>
+              <h3 class="font-display font-bold text-xl text-slate-900 mt-2">RenewSys EXTREME 615Wp</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Made in India Tier-1 module designed for extreme weather conditions. High performance in diffuse sunlight and heavy monsoon cloud cover in Kodagu &amp; Western Ghats.
+              </p>
+              <div class="mt-4 pt-3 border-t border-slate-200/80 grid grid-cols-2 gap-2 text-[11px] text-slate-500 font-medium">
+                <div>Cells: <strong class="text-slate-800">132 Half-Cut</strong></div>
+                <div>PID: <strong class="text-slate-800">Anti-PID Resistant</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20am%20interested%20in%20RenewSys%20615Wp." target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-xl font-bold text-xs bg-slate-900 text-white hover:bg-emerald-600 transition">
+              <span>Inquire This Model</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-slate-50 rounded-2xl border border-slate-200/80 shadow-card overflow-hidden hover:shadow-card-hover hover:border-emerald-300 transition-all flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=700&q=80" alt="Bifacial Dual Glass" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-amber-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-full">
+                680–715W Bifacial
+              </span>
+            </div>
+            <div class="p-6">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100/60 px-2.5 py-0.5 rounded-md">Dual Glass Power</span>
+              <h3 class="font-display font-bold text-xl text-slate-900 mt-2">BiN-03 Bifacial Dual Glass</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Captures direct sunlight on front and reflected albedo on the rear. Delivers up to 25% extra generation on white terrace roofs or ground mounts.
+              </p>
+              <div class="mt-4 pt-3 border-t border-slate-200/80 grid grid-cols-2 gap-2 text-[11px] text-slate-500 font-medium">
+                <div>Gain: <strong class="text-slate-800">+10% to +25%</strong></div>
+                <div>Glass: <strong class="text-slate-800">2.0mm + 2.0mm</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20am%20interested%20in%20Bifacial%20solar%20panels." target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-xl font-bold text-xs bg-slate-900 text-white hover:bg-emerald-600 transition">
+              <span>Inquire This Model</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-slate-50 rounded-2xl border border-slate-200/80 shadow-card overflow-hidden hover:shadow-card-hover hover:border-emerald-300 transition-all flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=700&q=80" alt="Hypersol 485W" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-slate-900/85 backdrop-blur-sm text-emerald-400 text-xs font-bold px-3 py-1 rounded-full">
+                Up to 485W
+              </span>
+            </div>
+            <div class="p-6">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-100/60 px-2.5 py-0.5 rounded-md">Compact Residential</span>
+              <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Hypersol up to 485W</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Lightweight, versatile form factor ideal for smaller urban rooftops, sloped tile roofs, or townhouses in Mysore city where spatial efficiency is essential.
+              </p>
+              <div class="mt-4 pt-3 border-t border-slate-200/80 grid grid-cols-2 gap-2 text-[11px] text-slate-500 font-medium">
+                <div>Efficiency: <strong class="text-slate-800">20.8%+</strong></div>
+                <div>Weight: <strong class="text-slate-800">23 kg</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20am%20interested%20in%20Hypersol%20485W." target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-xl font-bold text-xs bg-slate-900 text-white hover:bg-emerald-600 transition">
+              <span>Inquire This Model</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-slate-50 rounded-2xl border border-slate-200/80 shadow-card overflow-hidden hover:shadow-card-hover hover:border-emerald-300 transition-all flex flex-col justify-between">
+          <div>
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=700&q=80" alt="RenewSys 144X" class="w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-slate-900/85 backdrop-blur-sm text-emerald-400 text-xs font-bold px-3 py-1 rounded-full">
+                565–600 Wp
+              </span>
+            </div>
+            <div class="p-6">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-100/60 px-2.5 py-0.5 rounded-md">Commercial Solar</span>
+              <h3 class="font-display font-bold text-xl text-slate-900 mt-2">RenewSys EXTREME 144X</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Industrial grade module for schools, hospitals, factories, and agricultural pumpsets in Mysore &amp; Coorg. Built to withstand high wind velocity.
+              </p>
+              <div class="mt-4 pt-3 border-t border-slate-200/80 grid grid-cols-2 gap-2 text-[11px] text-slate-500 font-medium">
+                <div>Load: <strong class="text-slate-800">5400 Pa</strong></div>
+                <div>Warranty: <strong class="text-slate-800">25 Years</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20am%20interested%20in%20RenewSys%20144X." target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-1.5 py-2.5 rounded-xl font-bold text-xs bg-slate-900 text-white hover:bg-emerald-600 transition">
+              <span>Inquire This Model</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Consultation Banner -->
+      <div class="mt-16 bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-8 sm:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-card">
+        <div class="space-y-2 text-center md:text-left">
+          <h3 class="font-display font-extrabold text-2xl text-white">Not sure which panel fits your roof?</h3>
+          <p class="text-xs sm:text-sm text-slate-300 max-w-xl">
+            Book a free 15-minute site assessment. Our solar engineer will visit your roof in Mysore or Coorg and calculate the exact kW requirement.
+          </p>
+        </div>
+        <a href="index.html#estimate" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold text-sm px-7 py-3.5 rounded-full transition shadow-md shrink-0">
+          <span>Book Free Site Survey</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-slate-950 text-white border-t border-slate-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <div class="flex items-center gap-2">
+        <img src="logo-sun.png" alt="Sri Energy" class="h-7 w-7 object-contain" />
+        <span class="font-display font-bold text-sm text-white">Sri Energy Mysuru</span>
+      </div>
+      <p>+91 9019914411 · subaiah@srienergy.in · Vijaynagar, Mysuru 570002</p>
+      <p>© 2026 Sri Energy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ================= STICKY MOBILE BOTTOM BAR ================= -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2 shadow-2xl">
+    <div class="grid grid-cols-3 gap-2 text-center text-xs font-semibold">
+      <a href="tel:+919019914411" class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-slate-100 text-slate-800">
+        <span>Call</span>
+      </a>
+      <a href="https://wa.me/919019914411?text=Hi%20Sri%20Energy,%20I%20am%20asking%20about%20Solar%20Panels" target="_blank" rel="noopener" class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-emerald-50 text-emerald-800 font-bold">
+        <span>WhatsApp</span>
+      </a>
+      <a href="index.html#estimate" class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-emerald-600 text-white font-bold shadow-md">
+        <span>Free Quote</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
 </body>
 </html>
